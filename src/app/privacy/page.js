@@ -64,14 +64,13 @@ export default function PrivacyPage() {
                     {sections.map((section, index) => (
                         <div
                             key={index}
-                            className="bg-gray-50 rounded-4xl p-8 border border-gray-100 hover:shadow-xl transition-all duration-300"
-                            data-aos="fade-up"
+                            className="dark-metal-card rounded-4xl p-8 border border-gray-100 hover:shadow-xl transition-all duration-300"
                         >
-                            <div className="text-black mb-6">{section.icon}</div>
-                            <h3 className="text-xl font-black text-black mb-4 uppercase tracking-tight">
+                            <div className=" mb-6">{section.icon}</div>
+                            <h3 className="text-xl font-black  mb-4 uppercase tracking-tight">
                                 {section.title}
                             </h3>
-                            <p className="text-gray-600 text-sm leading-relaxed font-medium">{section.content}</p>
+                            <p className=" text-sm leading-relaxed font-medium">{section.content}</p>
                         </div>
                     ))}
                 </div>
@@ -86,9 +85,9 @@ export default function PrivacyPage() {
                         </div>
                     </section>
 
-                    <section className="bg-slate-900 p-10 rounded-[3rem] text-white">
+                    <section className="dark-metal-card p-10 rounded-4xl">
                         <h2 className="text-2xl font-black mb-6 uppercase tracking-tight text-white">02. Cookies & Industrial Analytics</h2>
-                        <p className="text-white/70 text-sm leading-relaxed mb-6">
+                        <p className=" text-sm leading-relaxed mb-6">
                             We use standard analytical cookies to monitor website performance and improve user experience. These tools collect non-identifiable data such as browser type and session duration to help us optimize our technical resource pages.
                         </p>
                         <Link href="/cookiePolicy" className="inline-block text-xs font-black uppercase tracking-widest border-b-2 border-blue-500 pb-1 hover:text-blue-400 transition-colors">
@@ -103,16 +102,16 @@ export default function PrivacyPage() {
                         </p>
                     </section>
 
-                    <section className="border-t border-gray-100 pt-12">
-                        <h2 className="text-2xl font-black text-black mb-6 uppercase tracking-tight">04. Contact Our Data Desk</h2>
-                        <div className="p-8 bg-gray-50 rounded-2xl border border-gray-100">
-                            <p className="text-gray-600 text-sm mb-4">For requests regarding data access or deletion, please reach out to our Administrative Unit:</p>
-                            <p className="font-black text-black uppercase tracking-tight">Aero Enterprises - Manufacturing Unit</p>
-                            <p className="text-sm text-gray-500 mb-4">Survey No. 109 Richard Compound, Manchipada Road, Vasai Phata, Vasai East, Palghar- 401208</p>
+                    <section className="dark-metal-card border-t border-gray-100 p-12">
+                        <h2 className="text-2xl font-black  mb-6 uppercase tracking-tight">04. Contact Our Data Desk</h2>
+                        <div className="p-8  rounded-2xl border border-gray-100">
+                            <p className=" text-sm mb-4">For requests regarding data access or deletion, please reach out to our Administrative Unit:</p>
+                            <p className="font-black  uppercase tracking-tight">Aero Enterprises - Manufacturing Unit</p>
+                            <p className="text-sm  mb-4">Survey No. 109 Richard Compound, Manchipada Road, Vasai Phata, Vasai East, Palghar- 401208</p>
                             <div className="flex flex-col md:flex-row gap-4">
-                                <a href="mailto:aeroenterprises00@gmail.com" className="text-blue-600 font-bold hover:underline">aeroenterprises00@gmail.com</a>
-                                <span className="hidden md:inline text-gray-300">|</span>
-                                <a href="tel:+918459121717" className="text-gray-800 font-bold">+91 8459121717</a>
+                                <a href="mailto:aeroenterprises00@gmail.com" className=" font-bold hover:underline hover:text-blue-400 transition-colors">aeroenterprises00@gmail.com</a>
+                                <span className="hidden md:inline">|</span>
+                                <a href="tel:+918459121717" className=" font-bold hover:text-blue-400 transition-colors">+91 8459121717</a>
                             </div>
                         </div>
                     </section>

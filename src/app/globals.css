@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 .blue-metal-card {
-  @apply rounded-xl shadow-lg text-white;
+  @apply rounded-4xl shadow-lg text-white;
   background-image: linear-gradient(45deg, #36566d, #5590c0, #36566d);
   background-size: 200% 200%;
   animation: metal-shimmer 6s ease-in-out infinite;
@@ -15,10 +15,11 @@
 }
 
 .dark-metal-card {
-  @apply rounded-lg shadow-md text-white;
+  @apply rounded-4xl shadow-md text-white;
   background-image: linear-gradient(45deg, #030b16, #36566d, #030b16);
   background-size: 200% 200%;
   animation: metal-shimmer 6s ease-in-out infinite;
+
 }
 
 @keyframes metal-shimmer {

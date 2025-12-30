@@ -27,6 +27,13 @@ const productsData = [
         description: "Zinc-coated (120-180 GSM) GI Coils. Unmatched corrosion resistance for HVAC ducting, roofing sheets, and industrial cladding.",
         img: "/gi-coil.webp"
     },
+    {
+        slug: "ss-coil-supplier-mumbai",
+        category: "Industrial Coil",
+        type: "STAINLESS STEEL (SS) COIL",
+        description: "High-grade SS coils for pharmaceutical, chemical, and food processing industries. Corrosion-resistant and food-safe.",
+        img: "/ss-coil.webp"
+    },
 
     // --- PRIMARY SHEETS (Premium 8x4 FT) ---
     {
@@ -37,28 +44,28 @@ const productsData = [
         img: "/crc-sheet.webp"
     },
     {
-        slug: "hr-sheet-8x4",
+        slug: "hr-sheet-8x4-ft-supplier-mumbai",
         category: "Primary Sheet",
         type: "HOT ROLLED (HR) SHEET (8x4 FT)",
         description: "Primary IS 2062 HR sheets. Robust structural base plates for factory mezzanines and heavy-duty industrial platforms.",
         img: "/hr-sheet.webp"
     },
     {
-        slug: "gi-sheet-8x4",
+        slug: "gi-sheet-8x4-ft-supplier-mumbai",
         category: "Primary Sheet",
         type: "GALVANIZED IRON (GI) SHEET (8x4 FT)",
         description: "8x4 ft GI sheets providing long-term rust protection for coastal industrial projects and general outdoor structural cladding.",
         img: "/gi-sheet.webp"
     },
     {
-        slug: "po-sheet-8x4",
+        slug: "po-sheet-8x4-ft-supplier-mumbai",
         category: "Primary Sheet",
         type: "PICKLED & OILED (P&O) SHEET (8x4 FT)",
         description: "Surface-cleaned P&O sheets. Free of scale for immediate welding and painting. Used heavily in automotive part fabrication.",
         img: "/pickle-sheet.webp"
     },
     {
-        slug: "ss-sheet-8x4",
+        slug: "ss-sheet-8x4-ft-supplier-mumbai",
         category: "Primary Sheet",
         type: "STAINLESS STEEL (SS) SHEET (8x4 FT)",
         description: "High-grade SS 304/316 sheets. Specialized corrosion-resistant materials for pharmaceutical cleanrooms and chemical processing units.",
@@ -67,35 +74,35 @@ const productsData = [
 
     // --- SECONDARY SHEETS ---
     {
-        slug: "secondary-cr-sheet",
+        slug: "secondary-cr-sheet-supplier-mumbai",
         category: "Secondary Sheet",
         type: "SECONDARY COLD ROLLED (CR) SHEET",
         description: "Cost-effective CRCA sheets for general fabrication, storage bins, and non-cosmetic industrial components where budget is key.",
         img: "/cr.webp"
     },
     {
-        slug: "secondary-hr-sheet",
+        slug: "secondary-hr-sheet-supplier-mumbai",
         category: "Secondary Sheet",
         type: "SECONDARY HOT ROLLED (HR) SHEET",
         description: "Affordable HR sheets for structural backing, site hoarding, and shoring. High strength-to-cost ratio for budget fabrication.",
         img: "/hr.webp"
     },
     {
-        slug: "secondary-gi-sheet",
+        slug: "secondary-gi-sheet-supplier-mumbai",
         category: "Secondary Sheet",
         type: "SECONDARY GALVANIZED IRON (GI) SHEET",
         description: "Budget-friendly galvanized sheets for temporary roofing, industrial fencing, and basic weather protection.",
         img: "/gi.webp"
     },
     {
-        slug: "secondary-po-sheet",
+        slug: "secondary-po-sheet-supplier-mumbai",
         category: "Secondary Sheet",
         type: "SECONDARY PICKLE & OILED (P&O) SHEET",
         description: "Economic P&O sheets for applications requiring a scale-free surface without the premium cost of primary prime material.",
         img: "/pickle.webp"
     },
     {
-        slug: "secondary-ss-sheet",
+        slug: "secondary-ss-sheet-supplier-mumbai",
         category: "Secondary Sheet",
         type: "SECONDARY STAINLESS STEEL (SS) SHEET",
         description: "Budget SS sheets for structural frameworks in humid environments where premium aesthetic finish is not required.",
@@ -189,7 +196,6 @@ export default function ProductsPage() {
             </div>
 
             {/* 4. COMPARISON SECTION (E-E-A-T BOOSTER) */}
-            {/* MASTER PRODUCT COMPARISON SECTION */}
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="text-center mb-20">
                         <h2 className="text-4xl md:text-6xl text-black font-black uppercase tracking-tighter mb-4">The Steel Sourcing Spectrum</h2>
@@ -202,9 +208,9 @@ export default function ProductsPage() {
                     <div className="grid lg:grid-cols-3 gap-8">
 
                         {/* 1. INDUSTRIAL COILS: THE LOGISTICS POWERHOUSE */}
-                        <div className="flex flex-col border-2 border-slate-100 rounded-[2.5rem] p-10 hover:shadow-2xl transition-all group hover:border-black">
+                        <div className="flex flex-col border-2 border-black rounded-[2.5rem] p-10 hover:shadow-2xl transition-all group hover:border-black">
                             <div className="mb-8">
-                                <span className="bg-blue-600 text-white text-[10px] font-black px-4 py-1.5 rounded-full uppercase tracking-widest">High Volume</span>
+                                <span className="bg-black text-white text-[10px] font-black px-4 py-1.5 rounded-full uppercase tracking-widest">High Volume</span>
                                 <h3 className="text-3xl font-black text-black mt-6 uppercase leading-none">Industrial<br />Coils</h3>
                             </div>
                             <p className="text-gray-600 text-sm font-medium leading-relaxed mb-8 grow">
@@ -212,19 +218,19 @@ export default function ProductsPage() {
                             </p>
                             <div className="space-y-4 mb-10">
                                 <div className="flex items-center gap-3 border-b border-gray-100 pb-3">
-                                    <CheckCircle2 className="w-5 h-5 text-blue-600" />
+                                    <CheckCircle2 className="w-5 h-5 text-black" />
                                     <span className="text-xs font-bold text-gray-800">20-Ton Average Weight</span>
                                 </div>
                                 <div className="flex items-center gap-3 border-b border-gray-100 pb-3">
-                                    <CheckCircle2 className="w-5 h-5 text-blue-600" />
+                                    <CheckCircle2 className="w-5 h-5 text-black" />
                                     <span className="text-xs font-bold text-gray-800">Direct Mill Sourcing</span>
                                 </div>
                                 <div className="flex items-center gap-3">
-                                    <CheckCircle2 className="w-5 h-5 text-blue-600" />
+                                    <CheckCircle2 className="w-5 h-5 text-black" />
                                     <span className="text-xs font-bold text-gray-800">Slitting & CTL Ready</span>
                                 </div>
                             </div>
-                            <div className="p-4 bg-slate-900 rounded-2xl text-white text-xs font-black text-center uppercase tracking-widest">
+                            <div className="p-4 dark-metal-card rounded-2xl text-white text-xs font-black text-center uppercase tracking-widest">
                                 Best For: Heavy Infrastructure & OEMs
                             </div>
                         </div>
@@ -232,7 +238,7 @@ export default function ProductsPage() {
                         {/* 2. PRIMARY SHEETS: THE PRECISION STANDARD */}
                         <div className="flex flex-col border-2 border-black rounded-[2.5rem] p-10 shadow-xl bg-slate-50 relative overflow-hidden">
                             <div className="absolute top-6 right-6">
-                                <Award className="w-8 h-8 text-blue-600" />
+                                <Award className="w-8 h-8 text-black" />
                             </div>
                             <div className="mb-8">
                                 <span className="bg-black text-white text-[10px] font-black px-4 py-1.5 rounded-full uppercase tracking-widest">Mill Certified</span>
@@ -255,15 +261,15 @@ export default function ProductsPage() {
                                     <span className="text-xs font-bold text-gray-800">Premium Packaging (8x4 FT)</span>
                                 </div>
                             </div>
-                            <div className="p-4 bg-blue-600 rounded-2xl text-white text-xs font-black text-center uppercase tracking-widest">
+                            <div className="p-4 dark-metal-card rounded-2xl text-white text-xs font-black text-center uppercase tracking-widest">
                                 Best For: Automotive & High-End Panels
                             </div>
                         </div>
 
                         {/* 3. SECONDARY SHEETS: THE COST ADVANTAGE */}
-                        <div className="flex flex-col border-2 border-slate-100 rounded-[2.5rem] p-10 hover:shadow-2xl transition-all group hover:border-black">
+                        <div className="flex flex-col border-2 border-black rounded-[2.5rem] p-10 hover:shadow-2xl transition-all group hover:border-black">
                             <div className="mb-8">
-                                <span className="bg-gray-400 text-white text-[10px] font-black px-4 py-1.5 rounded-full uppercase tracking-widest">Budget Optimized</span>
+                                <span className="bg-black text-white text-[10px] font-black px-4 py-1.5 rounded-full uppercase tracking-widest">Budget Optimized</span>
                                 <h3 className="text-3xl font-black text-black mt-6 uppercase leading-none">Secondary<br />Sheets</h3>
                             </div>
                             <p className="text-gray-600 text-sm font-medium leading-relaxed mb-8 grow">
@@ -271,19 +277,19 @@ export default function ProductsPage() {
                             </p>
                             <div className="space-y-4 mb-10">
                                 <div className="flex items-center gap-3 border-b border-gray-100 pb-3">
-                                    <CheckCircle2 className="w-5 h-5 text-gray-400" />
+                                    <CheckCircle2 className="w-5 h-5 text-black" />
                                     <span className="text-xs font-bold text-gray-800">Economical Rate Per KG</span>
                                 </div>
                                 <div className="flex items-center gap-3 border-b border-gray-100 pb-3">
-                                    <CheckCircle2 className="w-5 h-5 text-gray-400" />
+                                    <CheckCircle2 className="w-5 h-5 text-black " />
                                     <span className="text-xs font-bold text-gray-800">Hand-Picked Commercial Lots</span>
                                 </div>
                                 <div className="flex items-center gap-3">
-                                    <CheckCircle2 className="w-5 h-5 text-gray-400" />
+                                    <CheckCircle2 className="w-5 h-5 text-black" />
                                     <span className="text-xs font-bold text-gray-800">Immediate Vasai Stock</span>
                                 </div>
                             </div>
-                            <div className="p-4 bg-gray-400 rounded-2xl text-white text-xs font-black text-center uppercase tracking-widest">
+                            <div className="p-4 dark-metal-card rounded-2xl text-white text-xs font-black text-center uppercase tracking-widest">
                                 Best For: Hoarding & General Fab.
                             </div>
                         </div>
@@ -305,7 +311,7 @@ export default function ProductsPage() {
             </div>
 
             <CTA
-                title="Secure Your 2025 Material Inventory"
+                title="Secure Your Material Inventory"
                 description="Join 500+ industrial entities in the Mumbai-Thane-Vasai belt who rely on Aero Enterprises for verified steel supply."
                 primaryButtonText="Download Industrial Catalogue"
                 primaryButtonLink="/AERO-ENTERPRISES-CATALOGUE.pdf"

@@ -38,7 +38,7 @@ const milestones = [
     { year: "2015", event: "Aero Enterprises Launch", description: "Strategically founded to bridge the gap between major mills and specialized industrial SMEs in Vasai East." },
     { year: "2018", event: "Multi-Grade Specialization", description: "Expanded inventory to include advanced SS 316L and High-Tensile E350 grades for pharma and infra sectors." },
     { year: "2021", event: "ISO 9001:2015 Certification", description: "Formalized our 'Zero-Defect' supply chain process with international quality management standards." },
-    { year: "2024", event: "Logistics Hub Expansion", description: "Integrated our dedicated Godown facility in the Sativali Industrial Hub for massive stock readiness." }
+    { year: "2024", event: "Logistics Hub Expansion", description: "Integrated our dedicated Godown facility in the Dhumal Nagar Industrial Hub for massive stock readiness." }
 ];
 
 export default function AboutPage() {
@@ -111,7 +111,7 @@ export default function AboutPage() {
                 </div>
 
                 {/* 4. THE MILESTONE TIMELINE (TRUST) */}
-                <div className="mb-24 bg-slate-900 rounded-[3rem] py-20 px-8 md:px-16 text-white">
+                <div className="mb-24 dark-metal-card rounded-[3rem] py-20 px-8 md:px-16 text-white">
                     <div className="max-w-4xl mx-auto">
                         <h2 className="text-3xl md:text-5xl font-black text-white text-center mb-16 uppercase tracking-tighter">Growth Trajectory</h2>
                         <div className="space-y-12 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-linear-to-b before:from-transparent before:via-slate-300 before:to-transparent">

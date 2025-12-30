@@ -24,7 +24,7 @@ const Footer = () => {
         { name: 'Full Site Index (Sitemap)', path: '/sitemap' },
         { name: 'Terms of Service', path: '/terms' },
         { name: 'Privacy & Data Policy', path: '/privacy' },
-        { name: 'Cookie Policy', path: '/cookie-policy' },
+        { name: 'Cookie Policy', path: '/cookiePolicy' },
     ];
 
     const renderLinks = (links) => (
@@ -54,7 +54,7 @@ const Footer = () => {
                                 src="/AE-logo.webp"
                                 alt="Aero Enterprises Logo"
                                 width={140} height={40}
-                                className='mb-8 brightness-110 grayscale hover:grayscale-0 transition-all duration-500'
+                                className='mb-8 brightness-110 grayscale hover:grayscale-0 transition-all duration-500 w-auto'
                             />
                         </Link>
                         <p className="text-black text-sm leading-relaxed mb-8 font-medium">

@@ -37,7 +37,7 @@ export default function Navbar() {
                             alt="Aero Enterprises - Industrial Steel Supplier Mumbai"
                             width={120}
                             height={40}
-                            className="object-contain group-hover:scale-105 transition-transform"
+                            className="object-contain group-hover:scale-105 transition-transform w-auto"
                             priority
                         />
                     </Link>

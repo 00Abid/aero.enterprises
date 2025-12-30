@@ -79,11 +79,11 @@ export default function SitemapPage() {
                 <div className="max-w-7xl mx-auto">
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
                         {sitemapSections.map((section, idx) => (
-                            <div key={idx} className="bg-white rounded-3xl p-8 shadow-sm border border-gray-100 flex flex-col hover:shadow-xl transition-all">
-                                <h2 className="text-xl font-black text-black mb-2 uppercase tracking-tight">
+                            <div key={idx} className="dark-metal-card rounded-3xl p-8 shadow-sm border border-gray-100 flex flex-col hover:shadow-xl transition-all">
+                                <h2 className="text-xl font-black text-white mb-2 uppercase tracking-tight">
                                     {section.title}
                                 </h2>
-                                <p className="text-[10px] font-bold text-blue-600 uppercase tracking-widest mb-6 border-b border-gray-100 pb-4">
+                                <p className="text-[10px] font-bold text-white uppercase tracking-widest mb-6 border-b border-gray-100 pb-4">
                                     {section.description}
                                 </p>
 
@@ -92,9 +92,9 @@ export default function SitemapPage() {
                                         <li key={i}>
                                             <Link
                                                 href={item.path}
-                                                className="text-gray-600 hover:text-black text-sm font-medium transition-colors flex items-center group"
+                                                className="text-white hover:text-black text-sm font-medium transition-colors flex items-center group"
                                             >
-                                                <ChevronRight className="text-blue-600 mr-2 group-hover:translate-x-1 transition-transform shrink-0" size={14} />
+                                                <ChevronRight className="text-white mr-2 group-hover:translate-x-1 transition-transform shrink-0" size={14} />
                                                 {item.name}
                                             </Link>
                                         </li>
@@ -119,8 +119,8 @@ export default function SitemapPage() {
                             { icon: <ShieldCheck />, label: "Compliance", path: "/terms" },
                             { icon: <Phone />, label: "Support", path: "/contact" }
                         ].map((box, i) => (
-                            <Link key={i} href={box.path} className="group dark-metal-card rounded-[2rem] p-8 text-white text-center hover:scale-[1.03] transition-all shadow-xl">
-                                <div className="mx-auto mb-4 w-12 h-12 flex items-center justify-center bg-white/10 rounded-xl group-hover:bg-blue-600 transition-colors">
+                            <Link key={i} href={box.path} className="group dark-metal-card rounded-4xl p-8 text-white text-center hover:scale-[1.03] transition-all shadow-xl">
+                                <div className="mx-auto mb-4 w-12 h-12 flex items-center justify-center bg-white/10 rounded-xl group-hover:bg-black transition-colors">
                                     {React.cloneElement(box.icon, { size: 24 })}
                                 </div>
                                 <h3 className="text-xl font-black uppercase tracking-tight">{box.label}</h3>

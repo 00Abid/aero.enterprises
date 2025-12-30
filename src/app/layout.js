@@ -7,7 +7,6 @@ import "./globals.css";
 export const metadata = {
   title: {
     default: "AERO ENTERPRISES | Industrial Steel Sheets & Coils Supplier Mumbai",
-    template: "%s | AERO ENTERPRISES",
   },
   description: "Certified suppliers of HR, CR, GI, and SS sheets in Vasai, Maharashtra. Serving Mumbai, Thane, and Palghar with Mill Test Certificates (MTC) and certified digital weighbridge accuracy.",
 
@@ -49,10 +48,6 @@ export const metadata = {
     description: 'Leading industrial steel sheet suppliers serving the Mumbai region.',
     images: ['/og-image.webp'],
   },
-
-  // Crucial for mobile-first indexing
-  viewport: "width=device-width, initial-scale=1, maximum-scale=5",
-  themeColor: "#0f172a", // Matches your blue-metal theme
 };
 
 // 2. --- ORGANIZATION SCHEMA (E-E-A-T BOOSTER) ---
@@ -76,7 +71,7 @@ const orgSchema = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth" data-scroll-behavior="smooth">
       <head>
         <script
           type="application/ld+json"

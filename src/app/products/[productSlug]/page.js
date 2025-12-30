@@ -101,7 +101,7 @@ export default async function ProductPage({ params }) {
                         <div className="p-10 dark-metal-card rounded-[2.5rem] text-white shadow-2xl overflow-hidden relative">
                             <div className="absolute top-0 right-0 p-4 opacity-10"><BarChart3 size={60} /></div>
                             <span className="text-white/60 text-[10px] uppercase font-black tracking-widest block mb-2">Est. Market Rate</span>
-                            <div className="flex items-baseline gap-2">
+                            <div className="flex items-baseline gap-2 flex-wrap">
                                 <span className="text-6xl font-black">₹{product.price_avg_inr.toLocaleString('en-IN')}</span>
                                 <span className="text-white/60 text-xs font-bold uppercase tracking-widest">/ Metric Ton</span>
                             </div>
@@ -144,14 +144,14 @@ export default async function ProductPage({ params }) {
                         <div className="grid md:grid-cols-2 gap-8">
                             {weightCalc && (
                                 <div className="p-8 border-2 border-gray-50 rounded-4xl dark-metal-card">
-                                    <Calculator className="text-blue-600 mb-4" />
+                                    <Calculator className=" mb-4" />
                                     <h3 className="text-lg font-black mb-4 uppercase">{weightCalc.title}</h3>
                                     <p className="text-white text-sm leading-relaxed">{weightCalc.content}</p>
                                 </div>
                             )}
                             {hsn && (
                                 <div className="p-8 border-2 border-gray-50 rounded-4xl dark-metal-card">
-                                    <Info className="text-blue-600 mb-4" />
+                                    <Info className=" mb-4" />
                                     <h3 className="text-lg font-black mb-4 uppercase">{hsn.title}</h3>
                                     <p className="text-white text-sm leading-relaxed">{hsn.content}</p>
                                 </div>
@@ -217,7 +217,7 @@ export default async function ProductPage({ params }) {
 
                     {/* Delivery Map Signal */}
                     <section className="text-center bg-gray-50 rounded-[3rem] p-12">
-                        <MapPin className="mx-auto text-blue-600 mb-6" size={40} />
+                        <MapPin className="mx-auto  mb-6" size={40} />
                         <h3 className="text-3xl font-black mb-8 uppercase tracking-tighter">Regional Supply Hubs</h3>
                         <div className="flex flex-wrap justify-center gap-3">
                             {deliveryAreas.map((area, i) => (
@@ -234,7 +234,7 @@ export default async function ProductPage({ params }) {
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                             {relatedProducts.map((slug) => (
                                 <Link key={slug} href={`/products/${slug}`} className="p-6 dark-metal-card   border border-gray-100 rounded-3xl text-center hover:shadow-xl transition-all group">
-                                    <p className="text-[10px] font-black text-blue-600 uppercase tracking-widest mb-2">Category: Steel</p>
+                                    <p className="text-[10px] font-black  uppercase tracking-widest mb-2">Category: Steel</p>
                                     <p className="text-xs font-black uppercase group-hover:text-blue-600 transition-colors">
                                         {slug.replace(/-/g, ' ').toUpperCase()}
                                     </p>
@@ -261,16 +261,15 @@ export default async function ProductPage({ params }) {
                         </div>
                     </section>
                 </div>
-
-                <CTA
-                    title={`Source Certified ${product.material_name}`}
-                    description={`Contact Aero Enterprises for latest market rates on ${product.material_name}. Immediate delivery available across the Mumbai-Thane-Vasai belt.`}
-                    primaryButtonText="Request Direct Quote"
-                    primaryButtonLink="/contact"
-                    secondaryButtonText="View Catalog"
-                    secondaryButtonLink="/products"
-                />
             </div>
+            <CTA
+                title={`Source Certified ${product.material_name}`}
+                description={`Contact Aero Enterprises for latest market rates on ${product.material_name}. Immediate delivery available across the Mumbai-Thane-Vasai belt.`}
+                primaryButtonText="Request Direct Quote"
+                primaryButtonLink="/contact"
+                secondaryButtonText="View Catalog"
+                secondaryButtonLink="/products"
+            />
         </main>
     );
 }

@@ -157,7 +157,7 @@ export default function TestimonialsPage() {
 
             {/* 4. VERIFICATION PROMISE SECTION */}
             <section className="pb-24 px-6">
-                <div className="max-w-4xl mx-auto bg-slate-900 rounded-[3rem] p-10 md:p-16 text-center text-white relative overflow-hidden">
+                <div className="max-w-4xl mx-auto dark-metal-card rounded-[3rem] p-10 md:p-16 text-center text-white relative overflow-hidden">
                     <div className="absolute top-0 right-0 w-64 h-64 bg-blue-600/10 rounded-full -mr-32 -mt-32"></div>
                     <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter mb-6">The Aero Trust Guarantee</h2>
                     <p className="text-white/70 text-lg mb-10 leading-relaxed">

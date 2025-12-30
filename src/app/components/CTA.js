@@ -14,7 +14,7 @@ const CTA = (props) => {
 
     // ELITE UI: Higher contrast and better padding for industrial B2B users
     const primaryButtonClass = "dark-metal-card px-8 py-4 rounded-xl font-black uppercase tracking-widest text-sm text-white transition-all hover:scale-105 active:scale-95 shadow-lg flex items-center justify-center";
-    const secondaryButtonClass = "bg-white text-slate-900 px-8 py-4 rounded-xl font-black uppercase tracking-widest text-sm border-2 border-transparent hover:border-white hover:bg-transparent hover:text-white transition-all flex items-center justify-center";
+    const secondaryButtonClass = "bg-white text-slate-900 px-8 py-4 rounded-4xl font-black uppercase tracking-widest text-sm border-2 border-transparent hover:border-white hover:bg-transparent hover:text-white transition-all flex items-center justify-center";
 
     return (
         <section className="text-center py-20 px-6">
@@ -43,7 +43,6 @@ const CTA = (props) => {
                         {primaryButtonText}
                     </a>
 
-                    {/* 2. SECONDARY ACTION: INTERNAL NAVIGATION */}
                     <Link
                         href={secondaryButtonLink}
                         className={secondaryButtonClass}

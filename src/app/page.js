@@ -169,7 +169,7 @@ const Home = () => {
               { icon: <Truck />, title: 'Supply Chain Moat', desc: 'Optimized logistics network serving the Boisar-Bhiwandi-Taloja industrial belt.' }
             ].map((cap, i) => (
               <div key={i} className="dark-metal-card p-10 rounded-2xl shadow-lg border border-white/5 hover:border-blue-500 transition-all">
-                <div className="mb-6 text-blue-400">{cap.icon}</div>
+                <div className="mb-6 ">{cap.icon}</div>
                 <h3 className="text-2xl font-black mb-4 uppercase tracking-tight">{cap.title}</h3>
                 <p className="text-white/70 leading-relaxed font-medium text-sm">{cap.desc}</p>
               </div>
@@ -220,11 +220,11 @@ const Home = () => {
             <a key={index} href={company.url} target="_blank" rel="noopener noreferrer" className="group">
               <div className="dark-metal-card p-10 rounded-3xl shadow-xl h-full flex flex-col justify-between border border-white/5 hover:scale-[1.05] transition-all duration-500">
                 <div>
-                  <h3 className="text-xl font-black text-white border-b-4 border-blue-600 w-fit pb-2 uppercase tracking-tighter">{company.name}</h3>
+                  <h3 className="text-xl font-black text-white border-b-4 border-black w-fit pb-2 uppercase tracking-tighter">{company.name}</h3>
                   <p className="pt-8 text-white/70 font-medium leading-relaxed">{company.desc}</p>
                 </div>
                 <div className="pt-10 text-white flex items-center gap-4 font-black uppercase tracking-widest text-xs">
-                  Explore Entity Hub
+                  Explore Company 
                   <MoveRight className='group-hover:translate-x-4 transition-transform' />
                 </div>
               </div>
