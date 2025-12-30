@@ -37,35 +37,35 @@ const productsData = [
 
     // --- PRIMARY SHEETS (Premium 8x4 FT) ---
     {
-        slug: "crc-sheet-8x4-ft-supplier-mumbai",
+        slug: "crc-sheet-supplier-mumbai",
         category: "Primary Sheet",
         type: "COLD ROLLED (CR) SHEET (8x4 FT)",
         description: "Standard 8x4 ft CRC sheets (0.5mm - 3.0mm). Perfect for powder coating and deep drawing in appliance and electrical panel manufacturing.",
         img: "/crc-sheet.webp"
     },
     {
-        slug: "hr-sheet-8x4-ft-supplier-mumbai",
+        slug: "hr-sheet-supplier-mumbai",
         category: "Primary Sheet",
         type: "HOT ROLLED (HR) SHEET (8x4 FT)",
         description: "Primary IS 2062 HR sheets. Robust structural base plates for factory mezzanines and heavy-duty industrial platforms.",
         img: "/hr-sheet.webp"
     },
     {
-        slug: "gi-sheet-8x4-ft-supplier-mumbai",
+        slug: "gi-sheet-supplier-mumbai",
         category: "Primary Sheet",
         type: "GALVANIZED IRON (GI) SHEET (8x4 FT)",
         description: "8x4 ft GI sheets providing long-term rust protection for coastal industrial projects and general outdoor structural cladding.",
         img: "/gi-sheet.webp"
     },
     {
-        slug: "po-sheet-8x4-ft-supplier-mumbai",
+        slug: "po-sheet-supplier-mumbai",
         category: "Primary Sheet",
         type: "PICKLED & OILED (P&O) SHEET (8x4 FT)",
         description: "Surface-cleaned P&O sheets. Free of scale for immediate welding and painting. Used heavily in automotive part fabrication.",
         img: "/pickle-sheet.webp"
     },
     {
-        slug: "ss-sheet-8x4-ft-supplier-mumbai",
+        slug: "ss-sheet-supplier-mumbai",
         category: "Primary Sheet",
         type: "STAINLESS STEEL (SS) SHEET (8x4 FT)",
         description: "High-grade SS 304/316 sheets. Specialized corrosion-resistant materials for pharmaceutical cleanrooms and chemical processing units.",

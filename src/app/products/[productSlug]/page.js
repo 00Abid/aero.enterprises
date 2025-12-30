@@ -134,7 +134,7 @@ export default async function ProductPage({ params }) {
 
                         {/* Comparison Matrix (Dark Section) */}
                         {compareSection && (
-                            <section className="p-10 bg-slate-900 rounded-[3rem] text-white">
+                            <section className="p-10 dark-metal-card rounded-[3rem] text-white">
                                 <h2 className="text-2xl font-black mb-6 uppercase tracking-tight">{compareSection.title}</h2>
                                 <p className="text-white/70 text-base leading-relaxed font-medium italic">{compareSection.content}</p>
                             </section>
@@ -146,14 +146,14 @@ export default async function ProductPage({ params }) {
                                 <div className="p-8 border-2 border-gray-50 rounded-4xl dark-metal-card">
                                     <Calculator className=" mb-4" />
                                     <h3 className="text-lg font-black mb-4 uppercase">{weightCalc.title}</h3>
-                                    <p className="text-white text-sm leading-relaxed">{weightCalc.content}</p>
+                                    <p className="text-white text-sm leading-relaxed italic">{weightCalc.content}</p>
                                 </div>
                             )}
                             {hsn && (
                                 <div className="p-8 border-2 border-gray-50 rounded-4xl dark-metal-card">
                                     <Info className=" mb-4" />
                                     <h3 className="text-lg font-black mb-4 uppercase">{hsn.title}</h3>
-                                    <p className="text-white text-sm leading-relaxed">{hsn.content}</p>
+                                    <p className="text-white text-sm leading-relaxed italic">{hsn.content}</p>
                                 </div>
                             )}
                         </div>
@@ -194,7 +194,7 @@ export default async function ProductPage({ params }) {
                                 <ul className="space-y-2">
                                     {gradesSection.grades.map((grade, i) => (
                                         <li key={i} className="text-xs font-bold text-gray-600 flex items-center gap-2">
-                                            <div className="w-1.5 h-1.5 bg-blue-600 rounded-full" /> {grade}
+                                            <div className="w-1.5 h-1.5 bg-black rounded-full" /> {grade}
                                         </li>
                                     ))}
                                 </ul>

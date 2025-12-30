@@ -568,7 +568,7 @@ export const PRODUCTS = [
     "type": "HOT ROLLED (HR) SHEET",
     "material_name": "Hot Rolled Sheets 8x4 ft (HR Sheet)",
     "description": "Premium HR sheets in standard 8x4 ft size for structural, automotive, and fabrication applications. IS 2062/ASTM A36 certified. High strength, excellent weldability. Supplier serving Mumbai, Navi Mumbai, Thane, and pan-India.",
-    "img": "/hr-sheet-8x4.webp",
+    "img": "/hr-sheet.webp",
     "material_keywords": "HR Sheet Supplier Mumbai, Hot Rolled Sheet 8x4 Price, MS Sheet Dealer Vasai, HR Sheet Price Mumbai, Hot Rolled Steel Sheet India",
     "price_avg_inr": 56000,
     "stock_status": "High Stock",
@@ -747,12 +747,12 @@ export const PRODUCTS = [
     },
   },
   {
-    "material_slug": "cr-sheet-supplier-mumbai",
+    "material_slug": "crc-sheet-supplier-mumbai",
     "category": "Primary Sheets (8x4 FT)",
     "type": "COLD ROLLED (CR) SHEET",
     "material_name": "Cold Rolled Sheets 8x4 ft (CR Sheet)",
     "description": "Premium CR sheets in standard 8x4 ft size with superior surface finish and tight tolerances. Ideal for automotive, appliances, precision fabrication. IS 513/ASTM A1008 certified. Supplier serving Mumbai and pan-India.",
-    "img": "/cr-sheet-8x4.webp",
+    "img": "/cr-sheet.webp",
     "material_keywords": "CR Sheet Supplier Mumbai, Cold Rolled Sheet 8x4 Price, CR Sheet Dealer Vasai, CR Sheet Mumbai, Cold Rolled Steel Sheet India",
     "price_avg_inr": 63000,
     "stock_status": "High Stock",
@@ -837,24 +837,9 @@ export const PRODUCTS = [
     "grades_section": {
       "title": "CR Sheet Grades Explained",
       "grades": [
-        {
-          "grade": "Commercial Quality (CQ)",
-          "description": "General purpose grade, most economical, suitable for simple bending and forming",
-          "applications": "Furniture, light fabrication, non-critical parts",
-          "formability": "Basic"
-        },
-        {
-          "grade": "Drawing Quality (DQ)",
-          "description": "Improved formability over CQ, suitable for moderate drawing and bending operations",
-          "applications": "Metal furniture, cabinets, containers, moderate forming",
-          "formability": "Good"
-        },
-        {
-          "grade": "Deep Drawing Quality (DDQ)",
-          "description": "Superior formability for complex shapes, automotive-grade material",
-          "applications": "Automotive body panels, appliance parts, complex formed components",
-          "formability": "Excellent"
-        }
+        "CQ (Commercial Quality): Most economical, suitable for simple bending and light fabrication.",
+        "DQ (Drawing Quality): Improved formability for cabinets, containers, and moderate forming.",
+        "DDQ (Deep Drawing Quality): Superior formability for automotive panels and complex components."
       ],
       "note": "DDQ grade costs 8-12% more than CQ but is essential for complex automotive and appliance applications."
     },
@@ -962,7 +947,7 @@ export const PRODUCTS = [
     "type": "GALVANIZED IRON (GI) SHEET",
     "material_name": "Galvanized Iron Sheets 8x4 ft (GI Sheet)",
     "description": "Premium GI sheets in standard 8x4 ft size with zinc coating for superior corrosion resistance. Ideal for roofing, ducting, cladding, automotive applications. IS 277/ASTM A653 certified. Supplier serving Mumbai and pan-India.",
-    "img": "/gi-sheet-8x4.webp",
+    "img": "/gi-sheet.webp",
     "material_keywords": "GI Sheet Supplier Mumbai, Galvanized Sheet 8x4 Price, GI Sheet Dealer Vasai, GI Sheet Mumbai, Galvanized Iron Sheet India",
     "price_avg_inr": 59000,
     "stock_status": "High Stock",
@@ -1188,7 +1173,7 @@ export const PRODUCTS = [
     "type": "PICKLED & OILED (P&O) SHEET",
     "material_name": "Pickled & Oiled Sheets 8x4 ft (P&O Sheet)",
     "description": "Premium P&O sheets in 8x4 ft size with scale-free surface and protective oil coating. Intermediate grade between HR and CR. Ideal for automotive, tubes, precision fabrication. ASTM A1011 certified. Supplier serving Mumbai and pan-India.",
-    "img": "/po-sheet-8x4.webp",
+    "img": "/po-sheet.webp",
     "material_keywords": "P&O Sheet Supplier Mumbai, Pickled Oiled Sheet Price, HRPO Sheet Dealer Vasai, P&O Sheet Mumbai, Pickled and Oiled Steel Sheet India",
     "price_avg_inr": 58500,
     "stock_status": "Medium Stock",
@@ -1400,7 +1385,7 @@ export const PRODUCTS = [
     },
   },
   {
-    "material_slug": "secondary-hr-sheet-mumbai",
+    "material_slug": "secondary-hr-sheet-supplier-mumbai",
     "category": "Secondary Sheets (Cost-Effective)",
     "type": "SECONDARY HOT ROLLED (HR) SHEET",
     "material_name": "Secondary Hot Rolled Sheets (Secondary HR Sheet)",
@@ -1610,12 +1595,12 @@ export const PRODUCTS = [
     },
   },
   {
-    "material_slug": "secondary-cr-sheet-mumbai",
+    "material_slug": "secondary-cr-sheet-supplier-mumbai",
     "category": "Secondary Sheets (Cost-Effective)",
     "type": "SECONDARY COLD ROLLED (CR) SHEET",
     "material_name": "Secondary Cold Rolled Sheets (Secondary CR Sheet)",
     "description": "Cost-effective secondary CR sheets in 8x4 ft at 15-20% discount. Minor surface scratches, same formability. Ideal for painted parts, furniture interiors, non-visible applications. Mumbai supplier.",
-    "img": "/secondary-cr-sheet.webp",
+    "img": "/cr.webp",
     "material_keywords": "Secondary CR Sheet Mumbai, Cheap Cold Rolled Sheet, Budget CR Sheet Vasai, Second Quality CR Sheet Price, Off-Grade Cold Rolled Steel Mumbai",
     "price_avg_inr": 51000,
     "stock_status": "Medium Stock",
@@ -1821,12 +1806,12 @@ export const PRODUCTS = [
     },
   },
   {
-    "material_slug": "secondary-gi-sheet-mumbai",
+    "material_slug": "secondary-gi-sheet-supplier-mumbai",
     "category": "Secondary Sheets (Cost-Effective)",
     "type": "SECONDARY GALVANIZED IRON (GI) SHEET",
     "material_name": "Secondary Galvanized Iron Sheets (Secondary GI Sheet)",
     "description": "Cost-effective secondary GI sheets in 8x4 ft at 15-20% discount. Minor coating variations, full corrosion protection. Ideal for warehouse roofing, sheds, budget construction. Mumbai supplier.",
-    "img": "/secondary-gi-sheet.webp",
+    "img": "/gi.webp",
     "material_keywords": "Secondary GI Sheet Mumbai, Cheap Galvanized Sheet, Budget GI Sheet Vasai, Second Quality GI Sheet Price, Off-Grade Galvanized Iron Mumbai",
     "price_avg_inr": 48000,
     "stock_status": "High Stock",
@@ -2035,12 +2020,12 @@ export const PRODUCTS = [
     },
   },
   {
-    "material_slug": "secondary-po-sheet-mumbai",
+    "material_slug": "secondary-po-sheet-supplier-mumbai",
     "category": "Secondary Sheets (Cost-Effective)",
     "type": "SECONDARY PICKLED & OILED (P&O) SHEET",
     "material_name": "Secondary Pickled & Oiled Sheets (Secondary P&O Sheet)",
     "description": "Cost-effective secondary P&O sheets in 8x4 ft at 15-20% discount. Minor surface marks, scale-free base. Ideal for welding, tube manufacturing, budget fabrication. Mumbai supplier.",
-    "img": "/secondary-po-sheet.webp",
+    "img": "/po.webp",
     "material_keywords": "Secondary P&O Sheet Mumbai, Cheap Pickled Oiled Sheet, Budget HRPO Sheet Vasai, Second Quality P&O Sheet Price, Off-Grade Pickled Steel Mumbai",
     "price_avg_inr": 47500,
     "stock_status": "Low to Medium Stock",
@@ -2248,12 +2233,12 @@ export const PRODUCTS = [
     },
   },
   {
-    "material_slug": "secondary-ss-sheet-mumbai",
+    "material_slug": "secondary-ss-sheet-supplier-mumbai",
     "category": "Secondary Sheets (Cost-Effective)",
     "type": "SECONDARY STAINLESS STEEL (SS) SHEET",
     "material_name": "Secondary Stainless Steel Sheets (Secondary SS Sheet)",
     "description": "Cost-effective secondary SS sheets (304, 316, 201) at 15-20% discount. Minor surface marks, full corrosion resistance. Ideal for concealed parts, painted applications, budget projects. Mumbai supplier.",
-    "img": "/secondary-ss-sheet.webp",
+    "img": "/ss.webp",
     "material_keywords": "Secondary SS Sheet Mumbai, Cheap Stainless Steel Sheet, Budget SS 304 Sheet Vasai, Second Quality Stainless Sheet Price, Off-Grade SS Sheet Mumbai",
     "price_avg_inr": 152000,
     "stock_status": "Low Stock",
@@ -2462,8 +2447,6 @@ export const PRODUCTS = [
       }
     },
   }
-
-
 ];
 
 export const getAllProducts = () => {
