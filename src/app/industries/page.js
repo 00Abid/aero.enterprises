@@ -1,198 +1,149 @@
 import React from 'react';
 import Link from 'next/link';
-import { Truck, Hammer, Thermometer, Airplay, Hospital, Zap, Check } from 'lucide-react';
+import { Truck, Hammer, Thermometer, Airplay, Hospital, Zap, CheckCircle2, Factory, Settings, ShieldCheck, Cpu } from 'lucide-react';
 import CTA from "../components/CTA";
+import Image from 'next/image';
 
+// 1. --- Next.js SEO Metadata ---
 export const metadata = {
-    title: "Industries We Serve | AERO ENTERPRISES - Sheet Metal Solutions",
-    description: "AERO ENTERPRISES delivers precision sheet metal and fabrication solutions for the Automotive, Construction, HVAC, Aerospace, Medical, and Energy industries in India.",
-    keywords: ["sheet metal supplier automotive", "industrial fabrication solutions", "HVAC components India"],
-    alternates: {
-        canonical: 'https://aeroenterprises.shop/industries',
-    },
+    title: "Industries Served | Integrated Steel & Fabrication | Aero Enterprises",
+    description: "Aero Enterprises provides vertically integrated supply and fabrication for Automotive, HVAC, Construction, and Electrical sectors. Certified quality for India's core industries.",
 };
 
 const industries = [
     {
-        id: 1,
-        name: "Automotive",
-        slug: "automotive",
-        icon: <Truck size={36} className="text-[#36566d]" />,
-        description: "Precision components for automotive manufacturing, from engine parts to transmission systems.",
-        features: [
-            "Engine Components",
-            "Transmission Parts",
-            "Brake Systems",
-            "Suspension Components"
-        ]
+        name: "Automotive & EV",
+        icon: <Settings size={40} />,
+        description: "Specialized in Deep Drawing Quality (DDQ) material supply and high-volume stamping for chassis and hardware parts.",
+        features: ["Component Stamping", "Chassis Brackets", "EV Battery Enclosures", "DDQ Grade CR Sheets"]
     },
     {
-        id: 2,
-        name: "Construction",
-        slug: "construction",
-        icon: <Hammer size={36} className="text-[#36566d]" />,
-        description: "Heavy-duty parts and equipment for construction machinery and infrastructure projects.",
-        features: [
-            "Heavy Equipment Parts",
-            "Hydraulic Components",
-            "Structural Elements",
-            "Custom Fabrication"
-        ]
+        name: "HVAC & Ventilation",
+        icon: <Thermometer size={40} />,
+        description: "Delivering corrosion-resistant GI and SS solutions for industrial air handling units and complex ducting systems.",
+        features: ["GI Enclosures", "Perforated Panels", "Fan Housings", "120-180 GSM Coating"]
     },
     {
-        id: 3,
-        name: "HVAC",
-        slug: "hvac",
-        icon: <Thermometer size={36} className="text-[#36566d]" />,
-        description: "High-quality components for heating, ventilation, and air conditioning systems.",
-        features: [
-            "Compressor Parts",
-            "Heat Exchanger Components",
-            "Valve Assemblies",
-            "Control Systems"
-        ]
+        name: "Infrastructure & PEB",
+        icon: <Hammer size={40} />,
+        description: "Heavy-duty Hot Rolled (HR) plates and structural elements for pre-engineered buildings and warehouses.",
+        features: ["IS 2062 Plates", "Base Plate Fabrication", "Heavy Shearing", "Structural Columns"]
     },
     {
-        id: 4,
-        name: "Aerospace",
-        slug: "aerospace",
-        icon: <Airplay size={36} className="text-[#36566d]" />,
-        description: "Ultra-precise components meeting the strictest aerospace industry standards.",
-        features: [
-            "Aircraft Components",
-            "Turbine Parts",
-            "Landing Gear",
-            "Structural Elements"
-        ]
-    },
-    {
-        id: 5,
-        name: "Medical",
-        slug: "medical",
-        icon: <Hospital size={36} className="text-[#36566d]" />,
-        description: "Sterile, precision-machined components for medical devices and equipment.",
-        features: [
-            "Surgical Instruments",
-            "Implant Components",
-            "Diagnostic Equipment",
-            "Medical Devices"
-        ]
-    },
-    {
-        id: 6,
-        name: "Energy",
-        slug: "energy",
-        icon: <Zap size={36} className="text-[#36566d]" />,
-        description: "Durable components for power generation and energy distribution systems.",
-        features: [
-            "Turbine Components",
-            "Generator Parts",
-            "Pipeline Equipment",
-            "Renewable Energy"
-        ]
+        name: "Electrical & Control",
+        icon: <Cpu size={40} />,
+        description: "Precision-bent and powder-coated enclosures for control panels, server racks, and junction boxes.",
+        features: ["CNC Bending", "Junction Boxes", "Powder Coated Shells", "±0.5mm Tolerance"]
     }
 ];
 
-// --- 3. JSON-LD Schema Generation (Runs on Server) ---
-function generateIndustrySchema(data) {
-    // Generate a simple CollectionPage or Service schema since this is an overview page
-    return {
-        "@context": "https://schema.org",
-        "@type": "CollectionPage",
-        "name": "Industries We Serve",
-        "description": metadata.description,
-        "url": metadata.alternates.canonical,
-        "mainEntity": data.map(industry => ({
-            "@type": "Service",
-            "name": `${industry.name} Industry Solutions`,
-            "description": industry.description,
-            "url": `${metadata.alternates.canonical}/${industry.slug}`,
-            "provider": {
-                "@type": "Organization",
-                "name": "AERO ENTERPRISES"
-            }
-        }))
-    };
-}
-
-
-// --- 4. Main Server Component ---
 export default function IndustriesPage() {
-    const schema = generateIndustrySchema(industries);
-
-    // Removed useEffect and SEOHead entirely
     return (
-        <section className="bg-white">
-
-            {/* JSON-LD Schema Injection - Renders on Server */}
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-            />
-
-            {/* Hero Section */}
-            <div className='blue-metal w-full h-[30vh] flex justify-center items-center'>
-                <div className='ml-4 md:text-center'>
-                    <h1 className="text-4xl text-white pb-4">
-                        Industries We Serve
+        <main className="bg-white font-sans text-slate-900">
+            {/* 1. HERO HEADER */}
+            <div className='bg-slate-900 w-full h-[45vh] flex justify-center items-center text-center px-6 relative overflow-hidden'>
+                <div className="absolute inset-0 opacity-10 bg-[url('/grid-pattern.svg')]"></div>
+                <div className="relative z-10">
+                    <div className="mb-4 inline-flex items-center gap-2 bg-blue-600 px-4 py-1 rounded-full text-white text-[10px] font-black uppercase tracking-[0.3em]">
+                        Unit I & II Integrated Solutions
+                    </div>
+                    <h1 className="text-5xl md:text-8xl text-white font-black uppercase tracking-tighter leading-none mb-4">
+                        Core <span className="text-blue-500 text-outline">Sectors</span>
                     </h1>
-                    <p className='text-white text-lg'>
-                        Delivering precision solutions across industries with unmatched quality and expertise
+                    <p className='text-blue-100 text-lg md:text-xl font-medium max-w-2xl mx-auto'>
+                        Optimizing the value chain for India&apos;s leading manufacturing clusters.
                     </p>
                 </div>
             </div>
 
-            {/* Industries Grid */}
-            <div className="bg-[#F5F7FA] py-16 px-4">
+            {/* 2. THE INTEGRATED VALUE PROPOSITION */}
+            <section className="py-24 px-6 bg-slate-50 border-b border-gray-200">
                 <div className="max-w-7xl mx-auto">
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {industries.map((industry) => (
-                            <div
-                                key={industry.id}
-                                className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow duration-300 h-full flex flex-col justify-between"
-                            >
+                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                        <div className="relative h-[500px] rounded-[3.5rem] overflow-hidden shadow-2xl">
+                            <Image src="/press.webp" alt="Industrial Fabrication" fill className="object-cover" />
+                        </div>
+                        <div>
+                            <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-8 leading-tight">
+                                One Partner. <br/><span className="text-blue-600 italic">Every Sector.</span>
+                            </h2>
+                            <p className="text-gray-600 text-lg font-medium leading-relaxed mb-10">
+                                Aero Enterprises eliminates the gap between raw material sourcing and precision manufacturing. We serve Tier-1 OEMs by providing <strong>Mill-Certified Steel (Unit II)</strong> and <strong>Finished Components (Unit I)</strong> under one commercial agreement.
+                            </p>
+                            <div className="space-y-4">
+                                {['Zero Middle-Man Logistics', 'Total Material Traceability', 'Consolidated Procurement Billing'].map((item, i) => (
+                                    <div key={i} className="flex items-center gap-4 p-4 bg-white rounded-2xl border border-gray-100 shadow-sm">
+                                        <ShieldCheck className="text-blue-600" size={24} />
+                                        <span className="font-black uppercase text-xs tracking-widest">{item}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* 3. INDUSTRY LISTING GRID */}
+            <section className="py-24 px-6">
+                <div className="max-w-7xl mx-auto">
+                    <div className="text-center mb-20">
+                        <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter">Sector Capabilities</h2>
+                        <div className="h-2 w-24 bg-blue-600 mx-auto mt-6"></div>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-8">
+                        {industries.map((ind, i) => (
+                            <div key={i} className="p-12 bg-slate-900 rounded-[3.5rem] text-white flex flex-col justify-between group hover:shadow-2xl transition-all">
                                 <div>
-                                    <div className="mb-4">{industry.icon}</div>
-                                    <h2 className="text-2xl font-bold text-gray-900 mb-3">
-                                        {industry.name}
-                                    </h2>
-                                    <p className="text-gray-600 mb-6">
-                                        {industry.description}
+                                    <div className="text-blue-500 mb-8 p-5 bg-white/5 rounded-3xl w-fit group-hover:rotate-12 transition-transform">
+                                        {ind.icon}
+                                    </div>
+                                    <h3 className="text-3xl font-black uppercase tracking-tighter mb-4 italic">{ind.name}</h3>
+                                    <p className="text-blue-100/50 text-md font-medium leading-relaxed mb-10">
+                                        {ind.description}
                                     </p>
-
-                                    <ul className="space-y-2 mb-6">
-                                        {industry.features.map((feature, idx) => (
-                                            <li key={idx} className="flex items-center text-gray-700">
-                                                <Check className="w-5 h-5 text-green-500 mr-2" />
-                                                {feature}
-                                            </li>
-                                        ))}
-                                    </ul>
                                 </div>
-
-                                {/* Link Button */}
-                                <Link
-                                    href={`/industries/${industry.slug}`} // Use href for Next.js Link
-                                    className="inline-block dark-metal-card px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity w-full text-center mt-auto"
-                                >
-                                    Learn More
-                                </Link>
+                                <div className="grid grid-cols-2 gap-y-4 pt-10 border-t border-white/10">
+                                    {ind.features.map((feat, idx) => (
+                                        <div key={idx} className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-blue-400">
+                                            <CheckCircle2 size={14} /> {feat}
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
                         ))}
                     </div>
                 </div>
-            </div>
+            </section>
 
+            
 
-            {/* CTA Section - Added missing href props */}
+            {/* 4. TECHNICAL TRUST SIGNALS */}
+            <section className="py-24 bg-slate-50">
+                <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12 text-center">
+                    <div>
+                        <div className="text-4xl font-black text-slate-900 mb-2 italic tracking-tighter">±0.1mm</div>
+                        <p className="text-[10px] font-black uppercase text-blue-600 tracking-[0.2em]">Engineering Tolerance</p>
+                    </div>
+                    <div>
+                        <div className="text-4xl font-black text-slate-900 mb-2 italic tracking-tighter">MTC</div>
+                        <p className="text-[10px] font-black uppercase text-blue-600 tracking-[0.2em]">Mill Direct Traceability</p>
+                    </div>
+                    <div>
+                        <div className="text-4xl font-black text-slate-900 mb-2 italic tracking-tighter">RAL</div>
+                        <p className="text-[10px] font-black uppercase text-blue-600 tracking-[0.2em]">Powder Coating Palette</p>
+                    </div>
+                </div>
+            </section>
+
             <CTA
-                title="Ready to Discuss Your Project?"
-                description="Contact AERO ENTERPRISES today to explore how our precision manufacturing solutions can meet your industry's unique needs."
-                primaryButtonText="View Products"
-                primaryButtonLink="/products"
-                secondaryButtonText="Contact Us"
-                secondaryButtonLink="/contact"
+                title="Consolidate Your Procurement"
+                description="Whether you need raw HR/CR sheets or custom-bent industrial assemblies, Aero Enterprises delivers mill-certified quality directly to your assembly line."
+                primaryButtonText="Request Direct RFQ"
+                primaryButtonLink="/contact"
+                secondaryButtonText="View Machinery"
+                secondaryButtonLink="/machinery"
             />
-        </section>
+        </main>
     );
 }

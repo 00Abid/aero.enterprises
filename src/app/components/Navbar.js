@@ -14,6 +14,8 @@ export default function Navbar() {
         { path: "/", label: "Home" },
         { path: "/products", label: "Inventory" }, 
         { path: "/about", label: "Our Legacy" },
+        { path: "/services", label: "Fabrication" },
+        { path: "/machinery", label: "Machinery" },
         { path: "/testimonials", label: "Reviews" },
     ];
 

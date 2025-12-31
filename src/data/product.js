@@ -2446,6 +2446,475 @@ export const PRODUCTS = [
         "priceValidUntil": "2026-12-31"
       }
     },
+  },
+  {
+    "material_slug": "ss-coil-supplier-mumbai",
+    "category": "Industrial Coil",
+    "type": "STAINLESS STEEL (SS) COIL",
+    "material_name": "Stainless Steel Coils (SS Coil)",
+    "description": "Premium Stainless Steel coils in 304, 316L, and 200 series. High-corrosion resistance, multiple finishes (2B, BA, No. 4, Mirror). Leading supplier serving Mumbai, Vasai, and pan-India.",
+    "img": "/ss-coil.webp",
+    "material_keywords": "SS Coil Supplier Mumbai, Stainless Steel Coil Price India, SS 304 Coil Dealer Vasai, 316L Stainless Steel Coil Mumbai, SS Coil Manufacturers India, Jindal Stainless Steel Dealer",
+    "price_avg_inr": 185000,
+    "stock_status": "High Stock",
+    "min_thickness_mm": 0.3,
+    "max_thickness_mm": 6.0,
+    "usp_short": "High-grade anti-corrosive SS 304/316L coils for pharma, food processing, and architectural applications.",
+
+    "seo_title": "SS Coil Supplier Mumbai | Stainless Steel 304 & 316L Coil Price India",
+    "seo_meta_description": "Leading SS coil supplier in Mumbai. Premium 304, 316L, & 202 grades. 0.3mm-6mm thickness. BA/2B finishes. Current SS coil prices & same-day Mumbai delivery. Call +91 8459121717",
+    "seo_h1": "Stainless Steel Coil Supplier Mumbai | SS Coil Dealer India",
+
+    "intro_content": "Aero Enterprises is a premier Stainless Steel (SS) coil supplier in Mumbai, specializing in high-performance austenitic and ferritic steel for critical industrial applications. We stock a comprehensive range of SS 304, SS 316L, and SS 202 coils sourced from major mills like Jindal Stainless and imported variants. Our SS coils are highly valued for their superior corrosion resistance, aesthetic appeal, and hygienic properties, making them essential for pharmaceutical, chemical, food processing, and architectural sectors. Based in Vasai East, we provide precision slitting services and pan-India delivery at competitive market rates.",
+
+    "what_is_section": {
+      "title": "What is SS Coil? (Stainless Steel Coil Overview)",
+      "content": "SS Coil stands for Stainless Steel Coil. It is a flat-rolled product made from an iron-based alloy containing a minimum of 10.5% Chromium. This chromium content creates a passive layer of chromium oxide that prevents surface corrosion and blocks rust from spreading into the metal's internal structure. SS coils are produced through either hot-rolling or cold-rolling processes. Cold-rolled SS coils (CR) are the most common in the market due to their smooth finish and precise thickness, often available in various surface treatments like BA (Bright Annealed) or 2B finish."
+    },
+
+    "specifications": {
+      "title": "SS Coil Specifications",
+      "standard": "ASTM A240 / ASME SA240 / EN 10088-2",
+      "thickness_range": "0.3mm to 6mm (Cold Rolled & Hot Rolled)",
+      "width": "1000mm, 1250mm, 1500mm, or Custom Slit Widths",
+      "surface_finish": "2B, BA, No. 4 (Brushed), HL (Hairline), No. 8 (Mirror)",
+      "edge": "Mill Edge / Slit Edge (Precision Cutting)",
+      "grades": "SS 304, 304L, 316, 316L, 321, 310, 430, 202, J4",
+      "tensile_strength": "515-620 MPa (Grade 304)",
+      "yield_strength": "≥205 MPa",
+      "elongation": "≥40%"
+    },
+
+    "ss_coil_uses": {
+      "title": "SS Coil Uses and Applications",
+      "applications": [
+        "Pharmaceutical equipment: Cleanroom panels, storage tanks, and piping",
+        "Food & Beverage: Commercial kitchenware, dairy processing, and brewery tanks",
+        "Chemical & Petrochemical: Heat exchangers, pressure vessels, and fuel lines",
+        "Architecture: Elevators, wall cladding, handrails, and decorative trims",
+        "Automotive: Exhaust systems, catalytic converters, and trim components",
+        "Home Appliances: Washing machine drums, refrigerator panels, and ovens",
+        "Water Treatment: Desalination plants and industrial water tanks",
+        "Surgical Instruments and medical device manufacturing",
+        "Aerospace: Structural components and high-temperature fasteners",
+        "Marine hardware and coastal infrastructure (316L grade)"
+      ]
+    },
+
+    "ss_grades_comparison": {
+      "title": "Difference Between SS 304 and SS 316L Coils",
+      "content": "SS 304 is the most versatile '18/8' stainless steel used for general purpose applications like kitchenware and indoor panels. SS 316L contains 2-3% Molybdenum, which significantly increases resistance to chlorides (salt) and acidic chemicals. SS 316L is mandatory for marine environments, medical implants, and chemical processing. While SS 316L is roughly 30-40% more expensive than 304, it prevents 'pitting corrosion' in harsh environments where 304 might fail."
+    },
+
+    "ss_coil_price_section": {
+      "title": "SS Coil Price in India and Mumbai",
+      "content": "Stainless steel prices are highly volatile due to fluctuations in Nickel and Chromium rates on the LME (London Metal Exchange). As of late 2025, the SS 304 coil price in Mumbai is approximately ₹1,85,000 to ₹2,10,000 per metric ton. SS 202 remains a budget-friendly option at ₹1,10,000 - ₹1,30,000 per ton. Prices include 18% GST. Factors affecting price include LME rates, scrap availability, mill premiums (Jindal vs Imported), and the specific surface finish required (BA/Mirror finishes attract a premium). Call +91 8459121717 for a live quote."
+    },
+
+    "price_trends": {
+      "title": "SS Coil Price Today and Market Trends",
+      "content": "SS prices are currently influenced by global nickel supply chains and energy costs in manufacturing. Demand from the EV battery sector for Nickel also impacts SS availability. For real-time SS coil price today in Mumbai, Navi Mumbai, and Thane, including Jindal SS coil prices, contact our sales desk. We provide MTC-verified material at the most transparent daily rates."
+    },
+
+    "grades_section": {
+      "title": "SS Coil Grades Available",
+      "grades": [
+        "SS 304 - Standard Food Grade & General Fabrication",
+        "SS 316L - Marine & Chemical Grade (Low Carbon)",
+        "SS 202 - Economical grade for indoor furniture and decorative use",
+        "SS 430 - Ferritic grade used for automotive trim and appliances",
+        "SS 310 - Heat resistant grade for furnace and oven components",
+        "SS J4 - Jindal specific high-copper grade for better formability",
+        "SS 321 - Titanium stabilized for high-temperature applications"
+      ]
+    },
+
+    "why_choose_us": [
+      "Authorized sourcing of Jindal Stainless and premium imported coils",
+      "State-of-the-art slitting for narrow width SS strips (pattis)",
+      "Wide range of finishes: 2B, BA, Mirror, Hairline, and No. 4 in stock",
+      "Same-day delivery for Vasai-Virar and Mumbai industrial belts",
+      "Mill Test Certificates (MTC) provided with 100% heat traceability",
+      "Expert technical guidance on 304 vs 316L grade selection",
+      "Protective PVC coating available for scratch-free delivery",
+      "Flexible quantities from single small coil to full containers",
+      "Highly competitive pricing for bulk industrial procurement",
+      "Secondary/Defective SS coils available for non-critical budget projects"
+    ],
+
+    "delivery_areas": [
+      "Mumbai: Andheri, Kanjurmarg, Kalamboli Steel Market, Taloja, Bhiwandi",
+      "Navi Mumbai: Mahape, Rabale, Vashi, Uran, Dronagiri",
+      "Thane District: Wagle Estate, Ambernath, Badlapur, Mumbra",
+      "Vasai-Virar: Vasai Phata, Sativali, Waliv, Pelhar, Nalasopara",
+      "Gujarat: Ahmedabad, Surat, Vapi, Umbergaon (Express delivery)",
+      "Pan-India: Bangalore, Hyderabad, Chennai, Pune, Delhi NCR"
+    ],
+
+    "weight_calculator_section": {
+      "title": "SS Coil Weight Calculator",
+      "content": "To calculate SS coil weight: Weight (kg) = Length (m) × Width (m) × Thickness (mm) × 8.0 (density for 300 series). Note that SS 300 series is slightly denser (8.0) than MS (7.85). Example: A 0.5mm thick SS 304 coil of 1250mm width and 500m length weighs approx 2,500 kg."
+    },
+
+    "hsn_code_section": {
+      "title": "SS Coil HSN Code & GST",
+      "content": "The HSN code for Stainless Steel Coils is 7219 (Flat-rolled products of stainless steel, of a width of 600mm or more). For widths below 600mm (strips), the HSN is 7220. The applicable GST rate in India is 18%."
+    },
+
+    "faqs": [
+      {
+        "question": "Which SS coil grade is best for outdoor use?",
+        "answer": "SS 316L is recommended for outdoor and coastal use due to its superior resistance to salt-air corrosion. SS 304 can be used if sheltered and properly maintained."
+      },
+      {
+        "question": "What is the 2B finish on SS coils?",
+        "answer": "2B is a smooth, moderately reflective cold-rolled finish. It is the most common industrial finish and serves as a base for further polishing like No. 4 or Mirror."
+      },
+      {
+        "question": "What is the current price of SS 304 coil in Mumbai?",
+        "answer": "As of December 2025, SS 304 coil price ranges between ₹190 to ₹210 per kg + GST. Contact +91 8459121717 for today's live rate."
+      },
+      {
+        "question": "Do you provide slitting services for narrow SS coils?",
+        "answer": "Yes, we specialize in precision slitting through Sagar Metal Cutting Works. We can provide narrow strips (pattis) from 20mm width onwards."
+      },
+      {
+        "question": "How can I verify the quality of the SS coil?",
+        "answer": "Every batch we supply comes with an original Mill Test Certificate (MTC) showing the chemical composition (Ni, Cr, Mo) and mechanical properties."
+      },
+      {
+        "question": "What is the difference between 202 and 304 SS coils?",
+        "answer": "304 is high-nickel (min 8%) with excellent rust resistance. 202 is low-nickel (replaced by Manganese) and is prone to rusting in humid environments over time."
+      }
+    ],
+
+    "related_products": ["cr-coil-supplier-mumbai", "gi-coil-supplier-mumbai", "ss-sheet-supplier-mumbai", "hr-coil-supplier-mumbai", "ss-patti-supplier-vasai"],
+
+    "secondary_product_mention": {
+      "title": "Secondary SS Coils - Cost Saving Inventory",
+      "content": "For non-critical industrial applications like internal structural supports or hidden brackets, we offer secondary/defective SS coils. These materials may have minor surface scratches or thickness variations but offer the same metallurgical strength at a 20-30% discount compared to prime Jindal material."
+    },
+
+    "technical_specs": {
+      "standard": "ASTM A240 / ASME SA240",
+      "surface_finish": "2B, BA, No. 4, Mirror, HL",
+      "edge_condition": "Precision Slit Edge / Mill Edge",
+      "formability": "Deep Drawing Quality (DDQ) available for 304"
+    }
+  },
+  {
+    "material_slug": "ss-sheet-supplier-mumbai",
+    "category": "Primary Sheets (8x4 FT)",
+    "type": "STAINLESS STEEL (SS) SHEET",
+    "material_name": "Stainless Steel Sheets 8x4 ft (SS Sheet)",
+    "description": "Premium Stainless Steel sheets in standard 8x4 ft size. Available in 304, 316L, and 202 grades with multiple finishes (2B, BA, Mirror, No. 4). Corrosion-resistant, hygienic, and durable. Supplier serving Mumbai, Vasai, Thane, and pan-India.",
+    "img": "/ss-sheet.webp",
+    "material_keywords": "SS Sheet Supplier Mumbai, Stainless Steel 8x4 Sheet Price, SS 304 Sheet Dealer Vasai, SS 316L Sheet Mumbai, Stainless Steel Sheet Finishes India",
+    "price_avg_inr": 195000,
+    "stock_status": "High Stock",
+    "min_thickness_mm": 0.5,
+    "max_thickness_mm": 6.0,
+    "standard_size": "8 feet x 4 feet (2440mm x 1220mm)",
+    "usp_short": "High-grade, corrosion-resistant stainless steel sheets in versatile 8x4 ft dimensions.",
+
+    "seo_title": "SS Sheet Supplier Mumbai | Stainless Steel 8x4 ft Sheet Price India",
+    "seo_meta_description": "SS sheet supplier Mumbai. Stainless steel 8x4 ft sheets in 304, 316L, 202 grades. 0.5-6mm thickness. Mirror, Matte, BA finishes. Same-day dispatch Vasai. Call +91 8459121717",
+    "seo_h1": "Stainless Steel Sheet Supplier Mumbai | SS 8x4 ft Sheet Dealer",
+
+    "intro_content": "Aero Enterprises is a premier SS sheet supplier in Mumbai, offering a vast inventory of stainless steel sheets in the standard 8 feet x 4 feet (2440mm x 1220mm) format. We cater to pharmaceutical, food processing, architectural, and automotive industries across Mumbai, Thane, and Navi Mumbai. Our sheets are available in premium grades like SS 304, SS 316L, and SS 202, ensuring superior rust resistance and aesthetic brilliance. Based in Vasai East, we provide various surface finishes including 2B, BA, No. 4 (Brushed), and No. 8 (Mirror) with protective PVC coating for scratch-free delivery.",
+
+    "what_is_section": {
+      "title": "What is SS Sheet 8x4 ft?",
+      "content": "Stainless Steel (SS) sheet is a flat-rolled alloy steel known for its exceptional corrosion resistance and high chromium content. The 8x4 ft (2440mm x 1220mm) size is the global standard for industrial sheets, providing the perfect balance for laser cutting, bending, and cabinet fabrication. Unlike mild steel, SS sheets do not require painting or galvanizing to prevent rust. They are categorized by 'Grades' (like 304 for food grade or 316 for marine grade) and 'Finishes' (like Mirror for decoration or 2B for industrial use). The standard 8x4 size is highly efficient for CNC fiber laser cutting tables, minimizing off-cut wastage."
+    },
+
+    "specifications": {
+      "title": "SS Sheet 8x4 ft Specifications",
+      "standard": "ASTM A240 / ASME SA240 / EN 10088-2",
+      "standard_size": "8 feet x 4 feet (2440mm x 1220mm)",
+      "thickness_range": "0.5mm, 0.8mm, 1mm, 1.2mm, 1.5mm, 2mm, 2.5mm, 3mm, 4mm, 5mm, 6mm",
+      "surface_finish": "2B (Matte), BA (Bright), No. 4 (Brushed/Hairline), Mirror (No. 8)",
+      "edge": "Mill Edge / Slit Edge",
+      "grades": "SS 304, 304L, 316L, 310, 321, 202, 430",
+      "tensile_strength": "515 MPa (Grade 304)",
+      "yield_strength": "205 MPa",
+      "weight_per_sheet": "Varies by thickness (calculated at 8.0 density for 300 series)"
+    },
+
+    "thickness_weight_table": {
+      "title": "SS Sheet 8x4 ft Weight Chart (Approx.)",
+      "weights": [
+        { "thickness": "0.5mm", "weight_kg": 11.9, "weight_lb": 26.2 },
+        { "thickness": "0.8mm", "weight_kg": 19.0, "weight_lb": 41.9 },
+        { "thickness": "1.0mm", "weight_kg": 23.8, "weight_lb": 52.4 },
+        { "thickness": "1.2mm", "weight_kg": 28.6, "weight_lb": 63.0 },
+        { "thickness": "1.5mm", "weight_kg": 35.7, "weight_lb": 78.7 },
+        { "thickness": "2.0mm", "weight_kg": 47.6, "weight_lb": 104.9 },
+        { "thickness": "2.5mm", "weight_kg": 59.5, "weight_lb": 131.2 },
+        { "thickness": "3.0mm", "weight_kg": 71.4, "weight_lb": 157.4 },
+        { "thickness": "4.0mm", "weight_kg": 95.2, "weight_lb": 209.9 },
+        { "thickness": "5.0mm", "weight_kg": 119.0, "weight_lb": 262.3 },
+        { "thickness": "6.0mm", "weight_kg": 142.8, "weight_lb": 314.8 }
+      ]
+    },
+
+    "ss_sheet_uses": {
+      "title": "SS Sheet 8x4 ft Uses and Applications",
+      "applications": [
+        "Kitchenware & Food Processing: Counters, sinks, and industrial ovens",
+        "Pharmaceuticals: Laboratory furniture, cleanroom panels, and vessels",
+        "Interior Design: Lift interiors, wall cladding, and decorative trims",
+        "Automotive: Exhaust parts, heat shields, and decorative trims",
+        "Medical: Surgical instruments and hospital furniture",
+        "Chemical Industry: Acid-resistant tanks and chemical containers",
+        "Architecture: Signage boards, handrails, and gate designs",
+        "Consumer Goods: Refrigerator panels and washing machine components",
+        "Aerospace: Precision brackets and high-temperature panels",
+        "Marine Hardware: Boat fittings and coastal infrastructure (316L grade)"
+      ]
+    },
+
+    "finish_guide_section": {
+      "title": "SS Sheet Surface Finishes Explained",
+      "content": "2B Finish is the standard industrial matte finish, ideal for internal parts. BA (Bright Annealed) is highly reflective and smooth. No. 4 / Hairline finish features fine polishing lines, widely used for kitchen appliances and elevators. Mirror (No. 8) finish is highly reflective like a glass mirror, used for premium decor. We provide all decorative sheets with high-quality laser-grade PVC film to protect the finish during cutting and bending."
+    },
+
+    "ss_sheet_price_section": {
+      "title": "SS Sheet 8x4 ft Price in Mumbai",
+      "content": "SS sheet prices fluctuate based on LME Nickel rates. As of December 2025, SS 304 8x4 sheets (1mm) are approximately ₹5,500/sheet + GST. SS 202 is cheaper at approx ₹3,600/sheet. SS 316L attracts a 30-40% premium over 304. Factors affecting price include grade (300 vs 200 series), finish type (Mirror/Hairline cost more than 2B), thickness, and current GST (18%). For today's SS sheet price in Mumbai, Vasai, or Bhiwandi, contact us at +91 8459121717. We offer massive discounts for bundle (10+ sheets) and tonnage orders."
+    },
+
+    "price_trends": {
+      "title": "SS Sheet Price Today and Market Trends",
+      "content": "Stainless steel rates in India are heavily influenced by Jindal Stainless Limited (JSL) monthly price revisions and global raw material costs. Recent trends show increased demand for 304L and 316L grades in the pharma sector. For live SS sheet rates today in Mumbai including 304, 316, and 202 grades, reach out to our Vasai sales desk."
+    },
+
+    "why_choose_us": [
+      "Comprehensive stock of Jindal Stainless and premium imported SS sheets",
+      "All finishes available under one roof: 2B, BA, No. 4, Mirror, Hairline",
+      "Same-day dispatch for Mumbai, Vasai-Virar, and Palghar regions",
+      "High-quality Laser-grade PVC coating provided for all polished sheets",
+      "Mill Test Certificates (MTC) provided for 100% material traceability",
+      "Custom laser cutting and bending services available in-house",
+      "Technical assistance in selecting 304 vs 316L for specific environments",
+      "Bulk quantity discounts for industrial OEMs and large fabricators",
+      "Export-quality packing for pan-India and international shipping",
+      "Secondary SS sheets available for cost-sensitive non-critical projects"
+    ],
+
+    "delivery_areas": [
+      "Mumbai: Andheri, Bandra, Kurla, Vikhroli, Malad, Borivali, Mulund",
+      "Navi Mumbai: Vashi, Rabale, Taloja, Belapur, Panvel",
+      "Thane District: Thane City, Kalwa, Ambernath, Dombivli",
+      "Vasai-Virar: Sativali, Pelhar, Waliv, Vasai East, Virar",
+      "Palghar District: Boisar, Palghar Town, Umbergaon, Vapi",
+      "Pan-India: Pune, Bangalore, Hyderabad, Delhi, Ahmedabad"
+    ],
+
+    "hsn_code_section": {
+      "title": "SS Sheet HSN Code & GST",
+      "content": "The HSN code for Stainless Steel Sheet is 7219 (Flat-rolled products of stainless steel, of a width of 600mm or more). The applicable GST rate is 18%."
+    },
+
+    "faqs": [
+      {
+        "question": "Which is better for a kitchen: SS 202 or SS 304?",
+        "answer": "SS 304 is far superior for kitchens as it is 'Food Grade' and highly resistant to salt, water, and spices. SS 202 may develop rust spots over time in humid kitchen environments."
+      },
+      {
+        "question": "What is the weight of a 1.2mm SS 304 sheet (8x4 ft)?",
+        "answer": "A 1.2mm SS sheet in 8x4 size weighs approximately 28.6 kg. This is calculated using the formula: 2.44m x 1.22m x 1.2mm x 8.0 (density)."
+      },
+      {
+        "question": "Does Mirror finish SS sheet scratch easily?",
+        "answer": "Yes, mirror finishes are delicate. We provide these sheets with a double-layer or laser-grade PVC film to ensure they remain scratch-free during your fabrication process."
+      },
+      {
+        "question": "What is the difference between 304 and 316L SS sheets?",
+        "answer": "304 is general-purpose stainless steel. 316L contains Molybdenum, making it highly resistant to marine environments and harsh chemicals (Acid-proof)."
+      },
+      {
+        "question": "Do you provide custom bending for 8x4 SS sheets?",
+        "answer": "Yes, we have high-precision CNC bending machines that can bend SS sheets up to 3100mm length into custom profiles for cabinets, panels, and frames."
+      },
+      {
+        "question": "Can I get a Mill Test Certificate (MTC)?",
+        "answer": "Absolutely. We provide MTCs for all prime material, ensuring you receive the exact chemical composition (Nickel/Chromium content) you paid for."
+      },
+      {
+        "question": "Is SS sheet harder to cut than MS sheet?",
+        "answer": "Yes, SS work-hardens quickly. It requires specialized Fiber Laser cutting or high-quality shearing blades to get a clean edge without burrs."
+      }
+    ],
+
+    "cta_section": {
+      "title": "Get SS Sheet 8x4 ft Price Quote",
+      "content": "Looking for high-quality stainless steel sheets for your next project? Get an instant quote for your grade and finish requirements.",
+      "phone": "+91 8459121717",
+      "whatsapp": "+91 8459121717",
+      "email": "aeroenterprises00@gmail.com",
+      "address": "Vasai East, Mumbai, Maharashtra 401208"
+    },
+
+    "related_products": ["ss-coil-supplier-mumbai", "cr-sheet-supplier-mumbai", "hr-sheet-supplier-mumbai", "gi-sheet-supplier-mumbai", "ss-patti-supplier-vasai"],
+
+    "secondary_product_mention": {
+      "title": "Secondary SS Sheets 8x4 ft - Budget Alternative",
+      "content": "We stock secondary SS sheets (202, 304) at a 20-30% discount. These sheets might have minor surface marks or slight thickness variations but retain full metallurgical properties. Ideal for internal structural work, invisible brackets, or low-budget furniture frameworks where a prime finish isn't mandatory."
+    },
+
+    "technical_specs": {
+      "standard": "ASTM A240 / ASME SA240",
+      "size": "8 feet x 4 feet (2440mm x 1220mm)",
+      "surface_finish": "2B, BA, No. 4, Mirror, HL",
+      "corrosion_resistance": "High (Grade dependent)"
+    }
+  },
+  {
+    "material_slug": "po-sheet-supplier-mumbai",
+    "category": "Primary Sheets (8x4 FT)",
+    "type": "PICKLED & OILED (P&O) SHEET",
+    "material_name": "Pickled & Oiled Sheets (HRPO Sheet)",
+    "description": "High-quality HRPO sheets in standard 8x4 ft size. Scale-free surface, excellent weldability, and rust-protected with oil coating. Ideal for laser cutting and precision fabrication. Supplier serving Mumbai, Vasai, and pan-India.",
+    "img": "/po-sheet.webp",
+    "material_keywords": "HRPO Sheet Supplier Mumbai, Pickled and Oiled Sheet Price India, PO Steel Sheet Dealer Vasai, P&O Sheet 8x4 Price Mumbai, HRPO Sheet Manufacturers India, Laser Grade Steel Sheets",
+    "price_avg_inr": 62000,
+    "stock_status": "High Stock",
+    "min_thickness_mm": 1.6,
+    "max_thickness_mm": 6.0,
+    "standard_size": "8 feet x 4 feet (2440mm x 1220mm)",
+    "usp_short": "Scale-free, clean-surface HR steel with oil protection, perfect for high-precision laser cutting.",
+
+    "seo_title": "HRPO Sheet Supplier Mumbai | Pickled & Oiled Steel Sheet 8x4 Price",
+    "seo_meta_description": "Leading HRPO sheet supplier in Mumbai. Pickled & Oiled steel sheets 8x4 ft. Scale-free surface for laser cutting. 1.6-6mm thickness. Same-day dispatch Vasai. Call +91 8459121717",
+    "seo_h1": "HRPO Sheet Supplier Mumbai | Pickled & Oiled Steel Sheet Dealer India",
+
+    "intro_content": "Aero Enterprises is a specialized supplier of Pickled and Oiled (HRPO) sheets in Mumbai, providing a cleaner, scale-free alternative to standard Hot Rolled sheets. Our P&O sheets are processed through an acid bath (pickling) to remove the dark mill scale, followed by an oil application to prevent oxidation. This results in a smooth, clean surface that is the industry standard for high-precision Fiber Laser cutting and high-quality powder coating. Based in Vasai East, we stock 8x4 ft HRPO sheets in various thicknesses, offering a cost-effective solution for manufacturers who require the strength of HR steel with a surface finish closer to Cold Rolled steel.",
+
+    "what_is_section": {
+      "title": "What is Pickled & Oiled (HRPO) Sheet?",
+      "content": "HRPO stands for Hot Rolled Pickled and Oiled. It is a Hot Rolled steel sheet that has undergone 'Pickling'—a process where the sheet is passed through an acid solution to strip away the rough black mill scale (oxides) formed during hot rolling. After pickling, a thin layer of oil is applied to the surface to act as a barrier against moisture and rust. HRPO sheets offer better surface quality, improved flatness, and are much easier on fabrication tools like laser nozzles and bending dies compared to standard HR sheets. They provide an excellent base for painting, plating, and powder coating."
+    },
+
+    "specifications": {
+      "title": "HRPO Sheet 8x4 ft Specifications",
+      "standard": "IS 2062 / IS 10748 / ASTM A1011",
+      "standard_size": "8 feet x 4 feet (2440mm x 1220mm)",
+      "thickness_range": "1.6mm, 2mm, 2.5mm, 3mm, 4mm, 5mm, 6mm",
+      "surface_finish": "Pickled (Scale-free) & Oiled",
+      "edge": "Mill Edge / Slit Edge",
+      "grades": "IS 2062 E250 (Low Carbon), E350, Commercial Grade",
+      "tensile_strength": "370-490 MPa",
+      "yield_strength": "≥240 MPa",
+      "weight_per_sheet": "Same as HR steel (7.85 density)"
+    },
+
+    "hrpo_benefits_section": {
+      "title": "Why Use HRPO Instead of Standard HR?",
+      "content": "Using HRPO sheets significantly extends the life of your fabrication machinery. Standard HR mill scale is abrasive and can damage CNC bending tools and laser cutting lenses. HRPO's scale-free surface allows for faster laser cutting speeds, cleaner weld beads, and superior paint adhesion. For products requiring a high-end powder-coated finish (like electrical panels or furniture), HRPO eliminates the need for expensive mechanical descaling or heavy grinding."
+    },
+
+    "hrpo_sheet_uses": {
+      "title": "HRPO Sheet 8x4 ft Uses and Applications",
+      "applications": [
+        "Precision Fiber Laser Cutting: Intricate designs with clean edges",
+        "Automotive Parts: Brackets, reinforcements, and internal structural components",
+        "Electrical Enclosures: Control panels, junction boxes, and switchgear cabinets",
+        "HVAC Components: Fan housings, internal ducting, and air handling units",
+        "Steel Furniture: File cabinets, shelving units, and desk frames",
+        "Bicycle and Motorcycle parts: Frame components and mudguards",
+        "Agricultural Implements requiring high-quality paint finish",
+        "General Engineering: Deep-drawn parts and complex formed profiles",
+        "Domestic Appliances: Internal structural supports",
+        "Industrial Racks and high-end storage systems"
+      ]
+    },
+
+    "thickness_weight_table": {
+      "title": "HRPO Sheet 8x4 ft Weight Chart",
+      "weights": [
+        { "thickness": "1.6mm", "weight_kg": 37.2, "weight_lb": 82 },
+        { "thickness": "2.0mm", "weight_kg": 46.5, "weight_lb": 102 },
+        { "thickness": "2.5mm", "weight_kg": 58.1, "weight_lb": 128 },
+        { "thickness": "3.0mm", "weight_kg": 69.8, "weight_lb": 154 },
+        { "thickness": "4.0mm", "weight_kg": 93.0, "weight_lb": 205 },
+        { "thickness": "5.0mm", "weight_kg": 116.3, "weight_lb": 256 },
+        { "thickness": "6.0mm", "weight_kg": 139.6, "weight_lb": 307 }
+      ]
+    },
+
+    "hrpo_sheet_price_section": {
+      "title": "HRPO Sheet 8x4 ft Price in Mumbai",
+      "content": "HRPO sheet prices are typically ₹4,000 to ₹6,000 per ton higher than standard HR sheets due to the additional pickling and oiling process. As of late 2025, HRPO sheet price in Mumbai is approximately ₹62,000 per Metric Ton. For an 8x4 ft 2mm sheet, the cost is roughly ₹3,500/sheet + GST. Prices vary based on the mill (JSW, Tata, SAIL) and the current thickness-specific premiums. Bulk orders of 2 tons or more qualify for wholesale rates. Call +91 8459121717 for a live price update."
+    },
+
+    "why_choose_us": [
+      "Expertly stored HRPO sheets - maintained in moisture-controlled environments to prevent oil-staining",
+      "Superior surface quality - sourced directly from prime mills like JSW and Tata Steel",
+      "Ready stock of all standard gauges (1.6mm to 6mm)",
+      "Same-day dispatch for industrial hubs in Mumbai, Vasai, and Bhiwandi",
+      "Mill Test Certificates (MTC) provided for every batch",
+      "In-house technical support for grade and thickness selection",
+      "Clean-surface material reduces your pre-powder coating costs",
+      "Competitive pricing for Tier-1 and Tier-2 automotive suppliers",
+      "Flexible ordering - from 5 sheets to full truckloads",
+      "Pan-India logistics support with rust-preventive packing"
+    ],
+
+    "delivery_areas": [
+      "Mumbai: Andheri, Kanjurmarg, Vikhroli, Kalamboli, Taloja",
+      "Navi Mumbai: Mahape, Rabale, Airoli, Panvel",
+      "Thane: Wagle Estate, Dombivli, Ambernath, Bhiwandi",
+      "Vasai-Virar: Vasai East, Sativali, Waliv, Pelhar, Nalasopara",
+      "Palghar: Boisar, Palghar, Umbergaon, Vapi",
+      "Pan-India: Pune, Ahmedabad, Bangalore, Hyderabad, Delhi NCR"
+    ],
+
+    "hsn_code_section": {
+      "title": "HRPO Sheet HSN Code",
+      "content": "The HSN code for HRPO (Pickled and Oiled) sheet is 7208 (specifically 7208 27 for thicknesses below 3mm and 7208 26 for thicker sheets). The GST rate is 18%."
+    },
+
+    "faqs": [
+      {
+        "question": "Can I paint directly on HRPO sheets?",
+        "answer": "You must remove the protective oil layer using a degreaser or our 7-tank pre-treatment process before painting or powder coating for proper adhesion."
+      },
+      {
+        "question": "Is HRPO better for laser cutting than HR?",
+        "answer": "Yes. HRPO is the preferred 'Laser Grade' steel because the absence of mill scale ensures a faster cut, less dross, and prevents damage to the laser's cutting head."
+      },
+      {
+        "question": "Does HRPO rust?",
+        "answer": "HRPO is protected by a layer of oil. As long as the oil remains intact and the sheet is stored in a dry area, it will not rust. However, once the oil is removed, it must be painted or coated immediately."
+      },
+      {
+        "question": "What is the difference between HRPO and CR sheets?",
+        "answer": "HRPO is hot-rolled steel that has been cleaned; CR is cold-rolled steel. CR has tighter thickness tolerances and a smoother finish but is significantly more expensive than HRPO."
+      },
+      {
+        "question": "Do you provide MTC for HRPO sheets?",
+        "answer": "Yes, we provide full Mill Test Certificates for all our HRPO inventory, ensuring you get the exact chemical composition required for your fabrication."
+      }
+    ],
+
+    "cta_section": {
+      "title": "Get a Quote for PO Sheets",
+      "content": "Need clean-surface, scale-free HRPO sheets for your laser cutting project? Contact our sales team for current 8x4 ft sheet pricing.",
+      "phone": "+91 8459121717",
+      "whatsapp": "+91 8459121717",
+      "email": "aeroenterprises00@gmail.com",
+      "address": "Vasai East, Mumbai, Maharashtra 401208"
+    },
+
+    "related_products": ["hr-sheet-supplier-mumbai", "cr-sheet-supplier-mumbai", "gi-sheet-supplier-mumbai", "ms-plate-supplier-mumbai", "hr-coil-supplier-mumbai"],
+
+    "technical_specs": {
+      "standard": "IS 2062 / IS 10748",
+      "surface_finish": "Acid Pickled & Rust-Preventive Oiled",
+      "weldability": "Superior (No scale interference)",
+      "laser_suitability": "High-Efficiency Laser Grade"
+    }
   }
 ];
 

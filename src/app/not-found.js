@@ -1,10 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
-import { Home, Package, Users, Mail, ArrowLeft, Search, ShieldAlert } from 'lucide-react';
+import { Package, Users, Mail, ArrowLeft, Search, ShieldAlert } from 'lucide-react';
 
+// 1. --- SEO METADATA ---
 export const metadata = {
-    title: "404 - Page Not Found | Aero Enterprises",
-    description: "The page you are looking for does not exist. Navigate back to our industrial steel inventory or contact our Vasai sales desk for assistance.",
+    title: "404 - Material Specification Not Found | Aero Enterprises",
+    description: "The industrial specification or page you are looking for has been moved or updated. Access our current steel inventory or contact our Vasai sales desk.",
 };
 
 const popularPages = [
@@ -19,8 +20,8 @@ const popularPages = [
         icon: <Users className="w-5 h-5" />
     },
     {
-        name: 'Reviews',
-        path: '/testimonials',
+        name: 'Market Blog',
+        path: '/blog',
         icon: <Search className="w-5 h-5" />
     },
     {
@@ -32,55 +33,69 @@ const popularPages = [
 
 export default function NotFound() {
     return (
-        <main className="min-h-[80vh] bg-white flex items-center justify-center px-6 py-20 font-sans">
+        <main className="min-h-[90vh] bg-white flex items-center justify-center px-6 py-20 font-sans">
             <div className="max-w-4xl mx-auto text-center">
 
                 {/* 1. VISUAL ERROR INDICATOR */}
                 <div className="mb-12 relative inline-block">
-                    <h1 className="dark-metal-card text-[120px] md:text-[220px] font-black text-black leading-none select-none">
+                    <span className="absolute -top-6 -right-6 bg-red-600 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest animate-pulse">
+                        System Alert
+                    </span>
+                    <h1 className="text-[120px] md:text-[220px] font-black text-slate-900 leading-none select-none tracking-tighter">
                         404
                     </h1>
                 </div>
 
                 {/* 2. CORE MESSAGE */}
-                <div className="mb-12" data-aos="fade-up">
-                    <h2 className="text-3xl md:text-5xl font-black text-black mb-6 uppercase tracking-tighter">
-                        Material Not Found
+                <div className="mb-12">
+                    <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-6 uppercase tracking-tighter italic">
+                        Material <span className="text-blue-600">Not Found</span>
                     </h2>
-                    <p className="text-gray-500 text-lg md:text-xl max-w-lg mx-auto leading-relaxed font-medium">
-                        The specification or page you're looking for isn't here. It may have been moved to our updated inventory.
+                    <p className="text-slate-500 text-lg md:text-xl max-w-lg mx-auto leading-relaxed font-medium">
+                        The specific industrial grade, blog post, or page you're searching for is unavailable. It may have been re-indexed in our 2026 inventory update.
                     </p>
                 </div>
 
                 {/* 3. PRIMARY ACTIONS */}
-                <div className="flex flex-col sm:flex-row gap-4 justify-center mb-20" data-aos="fade-up" data-aos-delay="100">
-                    <Link href="/" className="dark-metal-card px-8 py-4 rounded-xl font-black uppercase tracking-widest text-xs text-white flex items-center justify-center gap-2 hover:scale-105 transition-all">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center mb-20">
+                    <Link href="/" className="bg-slate-900 px-10 py-5 rounded-2xl font-black uppercase tracking-widest text-[11px] text-white flex items-center justify-center gap-3 hover:bg-blue-600 hover:scale-105 transition-all shadow-xl shadow-slate-900/20">
                         <ArrowLeft size={16} /> Return to Home
                     </Link>
-                    <Link href="/contact" className="bg-gray-100 text-black px-8 py-4 rounded-xl font-black uppercase tracking-widest text-xs flex items-center justify-center gap-2 hover:bg-gray-200 transition-all">
+                    <Link href="/contact" className="bg-slate-50 text-slate-900 px-10 py-5 rounded-2xl font-black uppercase tracking-widest text-[11px] flex items-center justify-center gap-3 hover:bg-slate-200 transition-all border border-slate-200">
                         Contact Sales Desk
                     </Link>
                 </div>
 
-                {/* 4. TOPICAL RECOVERY LINKS */}
-                <div className="pt-12 border-t border-gray-100" data-aos="fade-up" data-aos-delay="200">
-                    <h3 className="text-xs font-black text-gray-400 uppercase tracking-[0.3em] mb-8">
-                        Quick Navigation Hub
+                {/* 4. TOPICAL RECOVERY LINKS - THE MAP TO SUCCESS */}
+                <div className="pt-16 border-t border-slate-100">
+                    <h3 className="text-[10px] font-black text-slate-400 uppercase tracking-[0.4em] mb-10">
+                        Strategic Navigation Hub
                     </h3>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+
+                    {/* Visualizing the site structure helps users orient themselves */}
+
+
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
                         {popularPages.map((page, index) => (
                             <Link key={index} href={page.path} className="group">
-                                <div className="border-2 border-gray-50 rounded-2xl p-6 bg-white hover:border-black hover:shadow-2xl transition-all duration-500 flex flex-col items-center">
-                                    <div className="text-blue-600 mb-4 group-hover:scale-110 transition-transform">
+                                <div className="border-2 border-slate-50 rounded-[2.5rem] p-8 bg-white hover:border-blue-600 hover:shadow-2xl transition-all duration-500 flex flex-col items-center">
+                                    <div className="text-blue-600 mb-4 group-hover:scale-110 group-hover:-rotate-12 transition-transform">
                                         {page.icon}
                                     </div>
-                                    <p className="text-[10px] font-black uppercase tracking-widest text-black group-hover:text-blue-600">
+                                    <p className="text-[10px] font-black uppercase tracking-widest text-slate-900 group-hover:text-blue-600">
                                         {page.name}
                                     </p>
                                 </div>
                             </Link>
                         ))}
                     </div>
+                </div>
+
+                {/* 5. BACKEND ASSISTANCE */}
+                <div className="mt-20">
+                    <p className="text-[9px] font-bold text-slate-300 uppercase tracking-[0.5em]">
+                        Aero Enterprises Technical Support | Error Reference: 404_NULL_REF
+                    </p>
                 </div>
             </div>
         </main>
