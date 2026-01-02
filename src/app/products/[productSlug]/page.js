@@ -9,6 +9,10 @@ import {
 } from 'lucide-react';
 import WhatsappButton from '../../components/WhatsappButton';
 import CTA from '../../components/CTA';
+import { EnhancedProductSchema, ProductOfferSchema } from '../../../components/schema/ProductSchema.js';
+import { ProductFAQSchema } from '../../../components/schema/FAQSchema.js';
+import { generateWebPageSchema, stringifySchema } from '../../../utils/schemaGenerator.js';
+import { withErrorHandling } from '../../../utils/schemaErrorHandler.js';
 
 export async function generateMetadata({ params }) {
     const { productSlug } = await params;
@@ -51,25 +55,59 @@ export default async function ProductPage({ params }) {
     const secondary = product.secondary_product_mention ?? null;
     const technicalSpecs = product.technical_specs ?? {};
 
-    const jsonLd = {
-        "@context": "https://schema.org/",
-        "@type": "Product",
-        "name": product.material_name,
-        "image": product.img,
-        "description": product.description,
-        "brand": { "@type": "Brand", "name": "Aero Enterprises" },
-        "offers": {
-            "@type": "Offer",
-            "priceCurrency": "INR",
-            "price": product.price_avg_inr,
-            "availability": "https://schema.org/InStock",
-            "url": `https://www.aeroenterprises.shop/products/${product.material_slug}`
-        }
+    // Generate comprehensive webpage schema for the product page
+    const generatePageSchema = () => {
+        const breadcrumbs = [
+            { name: 'Home', url: '/' },
+            { name: 'Steel Products', url: '/products' },
+            { name: product.material_name || product.type, url: `/products/${product.material_slug}` }
+        ];
+
+        return withErrorHandling(
+            generateWebPageSchema,
+            [{
+                type: 'ItemPage',
+                url: `/products/${product.material_slug}`,
+                title: product.seo_title,
+                description: product.seo_meta_description,
+                mainEntity: {
+                    "@type": "Product",
+                    "@id": `https://www.aeroenterprises.shop/products/${product.material_slug}`
+                },
+                breadcrumbs
+            }],
+            {
+                fallbackType: 'webpage',
+                enableRetry: false,
+                sanitizeData: true
+            }
+        );
     };
+
+    const pageSchema = generatePageSchema();
 
     return (
         <main className="bg-white font-sans text-slate-900 overflow-x-hidden">
-            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+            {/* Comprehensive Product Schema */}
+            <EnhancedProductSchema product={product} options={{ baseUrl: 'https://www.aeroenterprises.shop' }} />
+            
+            {/* Product Offer Schema */}
+            <ProductOfferSchema product={product} options={{ baseUrl: 'https://www.aeroenterprises.shop' }} />
+            
+            {/* Product FAQ Schema */}
+            {faqs.length > 0 && (
+                <ProductFAQSchema 
+                    faqs={faqs} 
+                    product={{ name: product.material_name || product.type, slug: product.material_slug }}
+                    options={{ baseUrl: 'https://www.aeroenterprises.shop' }}
+                />
+            )}
+            
+            {/* Page Schema */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: stringifySchema(pageSchema) }}
+            />
 
             {/* 1. HERO HEADER - Improved responsive heights */}
             <header className="blue-metal w-full py-16 md:py-28 flex justify-center items-center text-center px-6">

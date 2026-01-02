@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Shield, Lock, Eye, FileText, Database, ShieldCheck, HardHat, FileCode } from 'lucide-react';
 import CTA from '../components/CTA';
+import { ContentPageSchema } from '../../components/schema/WebPageSchema.js';
 
 // 1. --- Next.js SEO Metadata ---
 export const metadata = {
@@ -38,6 +39,14 @@ const sections = [
 export default function PrivacyPage() {
     return (
         <main className="bg-white font-sans text-slate-900">
+            {/* Privacy Page Schema */}
+            <ContentPageSchema
+                title="Privacy Policy | Industrial Data & RFQ Security | Aero Enterprises"
+                description="Discover how Aero Enterprises protects your fabrication blueprints, RFQ data, and industrial specifications. Our commitment to B2B confidentiality in Mumbai & Vasai."
+                url="/privacy"
+                pageType="WebPage"
+                options={{ baseUrl: 'https://www.aeroenterprises.shop' }}
+            />
             {/* Title Section */}
             <div className='bg-slate-900 w-full h-[40vh] flex justify-center items-center text-center px-6 relative overflow-hidden'>
                 <div className="absolute inset-0 opacity-10 bg-[url('/grid-pattern.svg')]"></div>

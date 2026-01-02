@@ -9,12 +9,15 @@ import CTA from './components/CTA';
 import Link from 'next/link';
 import FAQSectionClient from './components/FAQSectionClient';
 import Image from 'next/image';
+import { HomePageSchema } from '../components/schema/WebPageSchema.js';
 
 const Home = () => {
   const currentMonth = new Date().toLocaleString('default', { month: 'long', year: 'numeric' });
 
   return (
     <main className='bg-white overflow-hidden font-sans'>
+      {/* Home Page Schema */}
+      <HomePageSchema options={{ baseUrl: 'https://www.aeroenterprises.shop' }} />
 
       {/* 1. HERO SECTION: THE MANUFACTURING + SUPPLY HOOK */}
       <section className="relative w-full h-screen flex items-center overflow-hidden">
@@ -49,19 +52,6 @@ const Home = () => {
                 Fabrication RFQ
               </Link>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* NEW: LIVE CAPABILITY TICKER */}
-      <section className="bg-slate-900 py-4 border-y border-white/10">
-        <div className="flex overflow-hidden">
-          <div className="flex space-x-12 animate-marquee whitespace-nowrap px-6">
-            {['CNC BENDING ACTIVE', 'STAMPING UNIT: HIGH VOLUME', 'POWDER COATING: ONLINE', 'JSW PRIMARY STOCK: 500MT+', 'PAN-INDIA LOGISTICS ACTIVE'].map((text, i) => (
-              <span key={i} className="text-blue-400 font-black text-[10px] uppercase tracking-[0.4em] flex items-center gap-2">
-                <CheckCircle2 size={12} /> {text}
-              </span>
-            ))}
           </div>
         </div>
       </section>
@@ -113,14 +103,14 @@ const Home = () => {
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {[
-              { title: 'Metal Stamping', icon: <Hammer />, desc: 'High-Volume Pressing', link: '/services/stamping' },
-              { title: 'CNC Bending', icon: <Layers />, desc: 'Multi-Axis Precision', link: '/services/bending' },
-              { title: 'Powder Coating', icon: <Paintbrush />, desc: 'Industrial Finishing', link: '/services/coating' },
+              { title: 'Metal Stamping', icon: <Hammer />, desc: 'High-Volume Pressing', link: '/services/metal-stamping' },
+              { title: 'CNC Bending', icon: <Layers />, desc: 'Multi-Axis Precision', link: '/services/cnc-bending' },
+              { title: 'Powder Coating', icon: <Paintbrush />, desc: 'Industrial Finishing', link: '/services/powder-coating' },
               { title: 'CNC Punching', icon: <Cpu />, desc: 'Rapid Hole Profiling', link: '/services/punching' },
               { title: 'Laser Cutting', icon: <Scissors />, desc: 'Complex Geometry', link: '/services/laser-cutting' },
               { title: 'Welding', icon: <Factory />, desc: 'MIG/TIG Certified', link: '/services/welding' },
-              { title: 'Shearing', icon: <Ruler />, desc: 'Custom Cut-to-Size', link: '/services/shearing' },
-              { title: 'Supply Hub', icon: <Truck />, desc: 'Pan-India Logistics', link: '/services/logistics' }
+              { title: 'Shearing', icon: <Ruler />, desc: 'Custom Cut-to-Size', link: '/services/shearing-blanking' },
+              { title: 'Supply Hub', icon: <Truck />, desc: 'Pan-India Logistics', link: '/services/technical-consultation' }
             ].map((s, i) => (
               <Link href={s.link} key={i} className="group p-8 border border-gray-100 bg-gray-50 hover:bg-blue-600 transition-all rounded-[2.5rem] flex flex-col justify-between h-64">
                 <div className="text-blue-600 group-hover:text-white transition-colors">{s.icon}</div>
@@ -139,7 +129,8 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <div className="relative h-[600px] rounded-[3rem] overflow-hidden group">
-              <Image src="/press.webp" alt="Heavy Stamping Press" fill className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700 shadow-2xl" />
+              <Image src="/press.webp" alt="Heavy Stamping Press" 
+              fill className="object-cover  shadow-2xl" />
               <div className="absolute inset-0 bg-linear-to-t from-black via-transparent to-transparent"></div>
               <div className="absolute bottom-10 left-10 text-white">
                 <div className="text-5xl font-black uppercase italic tracking-tighter">High Volume</div>

@@ -6,6 +6,10 @@ import {
 } from 'lucide-react';
 import Image from 'next/image';
 import CTA from '../components/CTA';
+import { ComprehensiveEquipmentSchema, TechnicalSpecificationSchema, ManufacturingProcessSchema } from '../../components/schema/EquipmentSchema.js';
+import { ManufacturingFacilitySchema, ServiceAreaSchema } from '../../components/schema/LocationSchema.js';
+import { generateWebPageSchema, stringifySchema } from '../../utils/schemaGenerator.js';
+import { withErrorHandling } from '../../utils/schemaErrorHandler.js';
 
 export const metadata = {
     title: "Machinery & Production Capacity | Aero Enterprises Vasai",
@@ -42,8 +46,91 @@ const toolRoom = [
 ];
 
 export default function MachineryPage() {
+    // Generate webpage schema for the machinery page
+    const generatePageSchema = () => {
+        return withErrorHandling(
+            generateWebPageSchema,
+            [{
+                type: 'WebPage',
+                url: '/machinery',
+                title: 'Machinery & Production Capacity | Aero Enterprises Vasai',
+                description: 'Technical breakdown of Aero Enterprises production facility. Featuring 150-ton power presses, a conveyorized 7-tank powder coating unit, and CNC laser cutting infrastructure.',
+                mainEntity: {
+                    "@type": "ItemList",
+                    "name": "Manufacturing Equipment"
+                }
+            }],
+            {
+                fallbackType: 'webpage',
+                enableRetry: false,
+                sanitizeData: true
+            }
+        );
+    };
+
+    // Technical specifications for power presses
+    const powerPressSpecs = powerPresses.map(press => ({
+        name: `${press.tonnage} Power Press`,
+        value: `${press.count} - Industrial stamping capacity`
+    }));
+
+    // Technical specifications for powder coating
+    const coatingSpecs = powderCoating.map(item => ({
+        name: item.item,
+        value: `${item.spec} - ${item.qty}`
+    }));
+
+    // Manufacturing process for stamping
+    const stampingProcess = {
+        name: "Metal Stamping Process",
+        description: "High-precision metal stamping and forming process",
+        steps: [
+            { name: "Material Preparation", description: "Select and prepare steel sheets according to specifications" },
+            { name: "Die Setup", description: "Install and calibrate progressive dies in power press" },
+            { name: "Stamping Operation", description: "Execute high-speed stamping with precision tolerance" },
+            { name: "Quality Inspection", description: "Verify dimensional accuracy and surface finish" }
+        ],
+        equipment: ["Power Press", "Progressive Dies", "Digital Calipers"],
+        materials: ["HR Steel", "CR Steel", "GI Steel", "SS Steel"]
+    };
+
+    const pageSchema = generatePageSchema();
     return (
         <main className="bg-white font-sans text-slate-900">
+            {/* Comprehensive Equipment and Certification Schema */}
+            <ComprehensiveEquipmentSchema options={{ baseUrl: 'https://www.aeroenterprises.shop' }} />
+            
+            {/* Manufacturing Facility Schema */}
+            <ManufacturingFacilitySchema options={{ baseUrl: 'https://www.aeroenterprises.shop' }} />
+            
+            {/* Service Area Schema */}
+            <ServiceAreaSchema options={{ baseUrl: 'https://www.aeroenterprises.shop' }} />
+            
+            {/* Technical Specifications Schema for Power Presses */}
+            <TechnicalSpecificationSchema 
+                specifications={powerPressSpecs}
+                title="Power Press Specifications"
+                options={{ baseUrl: 'https://www.aeroenterprises.shop' }}
+            />
+            
+            {/* Technical Specifications Schema for Powder Coating */}
+            <TechnicalSpecificationSchema 
+                specifications={coatingSpecs}
+                title="Powder Coating Equipment Specifications"
+                options={{ baseUrl: 'https://www.aeroenterprises.shop' }}
+            />
+            
+            {/* Manufacturing Process Schema */}
+            <ManufacturingProcessSchema 
+                process={stampingProcess}
+                options={{ baseUrl: 'https://www.aeroenterprises.shop' }}
+            />
+            
+            {/* Page Schema */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: stringifySchema(pageSchema) }}
+            />
             {/* 1. HERO: TECHNICAL AUTHORITY */}
             <div className='bg-slate-900 w-full h-[50vh] flex justify-center items-center text-center px-6 relative overflow-hidden'>
                 <div className="absolute inset-0 opacity-10 bg-[url('/grid-pattern.svg')]"></div>

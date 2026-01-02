@@ -2,6 +2,8 @@ import React from 'react';
 import { MapPin, Phone, Mail, Clock, Factory, Warehouse, ShieldCheck, Truck, Headphones, MessageSquare } from 'lucide-react';
 import Form from '../components/form';
 import Link from 'next/link';
+import { DualFacilitySchema } from '../../components/schema/LocalBusinessSchema.js';
+import { ComprehensiveContactSchema } from '../../components/schema/ContactSchema.js';
 
 // 1. --- Core Data for NAP Consistency ---
 const companyName = "AERO ENTERPRISES";
@@ -10,9 +12,9 @@ const secondaryPhone = "+91 9096105019";
 const emailAddress = "aeroenterprises00@gmail.com";
 const businessHours = "Mon - Sat: 9:00 AM - 9:00 PM";
 
-// 🛑 IMPORTANT: Update these with your actual Google Maps Embed URLs (not just search links)
-const unitMapUrl = "https://www.google.com/maps/embed?pb=YOUR_EMBED_URL_HERE";
-const godownMapUrl = "https://www.google.com/maps/embed?pb=YOUR_EMBED_URL_HERE";
+// 🛑 IMPORTANT: Update these with your actual Google Maps Embed URLs (not just search links) 
+const unitMapUrl = "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2308.3092220137332!2d72.8787743824079!3d19.42853539164747!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7a9de2e91e5ff%3A0x811b0c0d95c22d35!2sAERO%20ENTERPRISES%20-%20MANUFACTURING%20(%20Your%20Trusted%20Sheet%20Metal%20Supplier%20and%20Fabrication%20Patner%20)!5e0!3m2!1sen!2sin!4v1767331090326!5m2!1sen!2sin";
+const godownMapUrl = "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2859.17920204129!2d72.86479319473277!3d19.424404457147837!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7a9b747bf5dc7%3A0x25cd218db9d15dc7!2sAERO%20ENTERPRISES%20-%20WAREHOUSE%20(%20Your%20Trusted%20Sheet%20Metal%20Supplier%20and%20Fabrication%20Partner%20)!5e0!3m2!1sen!2sin!4v1767330950722!5m2!1sen!2sin";
 
 // 2. --- Next.js SEO Metadata ---
 export const metadata = {
@@ -21,43 +23,14 @@ export const metadata = {
     keywords: ["steel fabrication Vasai", "Aero Enterprises contact", "sheet metal stamping Mumbai", "MSME steel supplier Palghar"],
 };
 
-// 3. --- Multi-Location Schema (LocalBusiness + Branch) ---
-const schemaMarkup = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": companyName,
-    "image": "https://www.aeroenterprises.shop/AE-logo.webp",
-    "telephone": primaryPhone,
-    "email": emailAddress,
-    "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Gala No. 1, Khan Compound, Near Gausiya Weight Kata, Dhumal Nagar",
-        "addressLocality": "Vasai East",
-        "addressRegion": "Maharashtra",
-        "postalCode": "401208",
-        "addressCountry": "IN"
-    },
-    "department": [
-        {
-            "@type": "ManufacturingBusiness",
-            "name": "Aero Enterprises - Unit I (Manufacturing)",
-            "description": "Sheet Metal Stamping, Bending, and Powder Coating facility."
-        },
-        {
-            "@type": "Warehouse",
-            "name": "Aero Enterprises - Unit II (Logistics Hub)",
-            "description": "Bulk Steel Stockholding and Digital Weighbridge facility."
-        }
-    ]
-};
-
 export default function ContactPage() {
     return (
         <main className='bg-white font-sans'>
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }}
-            />
+            {/* Comprehensive Contact Schema */}
+            <ComprehensiveContactSchema options={{ baseUrl: 'https://www.aeroenterprises.shop' }} />
+            
+            {/* Local Business Schema for Both Facilities */}
+            <DualFacilitySchema options={{ baseUrl: 'https://www.aeroenterprises.shop' }} />
 
             {/* Hero Section */}
             <section className='bg-slate-900 w-full h-[50vh] flex justify-center items-center text-center px-6 relative overflow-hidden'>
@@ -95,10 +68,10 @@ export default function ContactPage() {
                                 </div>
                                 <p className="text-gray-600 text-sm leading-relaxed mb-8 font-medium">
                                     Strategic facility for CNC Bending, High-Volume Stamping, and Powder Coating. <br />
-                                    <strong>Vasai Phata Industrial Belt, Maharashtra.</strong>
+                                    <strong>Survey No. 109 Richard Compound, Manchipada Road, Vasai Phata, Vasai East, Palghar - 401208.</strong>
                                 </p>
                                 <div className="flex items-center gap-6">
-                                    <Link href="#" className="text-xs font-black uppercase tracking-widest text-slate-900 border-b-2 border-blue-600 pb-1">
+                                    <Link href="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2308.3092220137332!2d72.8787743824079!3d19.42853539164747!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7a9de2e91e5ff%3A0x811b0c0d95c22d35!2sAERO%20ENTERPRISES%20-%20MANUFACTURING%20(%20Your%20Trusted%20Sheet%20Metal%20Supplier%20and%20Fabrication%20Patner%20)!5e0!3m2!1sen!2sin!4v1767331090326!5m2!1sen!2sin" className="text-xs font-black uppercase tracking-widest text-slate-900 border-b-2 border-blue-600 pb-1">
                                         Navigate to Unit I →
                                     </Link>
                                 </div>
@@ -117,9 +90,9 @@ export default function ContactPage() {
                                 </div>
                                 <p className="text-gray-600 text-sm leading-relaxed mb-8 font-medium">
                                     Main hub for Bulk Coil Inventory, Digital Weighbridge, and Primary/Secondary Stock. <br />
-                                    <strong>Khan Compound, Dhumal Nagar, Vasai East - 401208.</strong>
+                                    <strong>Gala No. 1, Khan Compound, Near Gausiya Weight Kata, Dhumal Nagar, Vasai East - 401208.</strong>
                                 </p>
-                                <Link href="#" className="text-xs font-black uppercase tracking-widest text-slate-900 border-b-2 border-blue-600 pb-1">
+                                <Link href="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2859.17920204129!2d72.86479319473277!3d19.424404457147837!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7a9b747bf5dc7%3A0x25cd218db9d15dc7!2sAERO%20ENTERPRISES%20-%20WAREHOUSE%20(%20Your%20Trusted%20Sheet%20Metal%20Supplier%20and%20Fabrication%20Partner%20)!5e0!3m2!1sen!2sin!4v1767330950722!5m2!1sen!2sin" className="text-xs font-black uppercase tracking-widest text-slate-900 border-b-2 border-blue-600 pb-1">
                                     Navigate to Unit II →
                                 </Link>
                             </div>
@@ -176,7 +149,7 @@ export default function ContactPage() {
                     <div className="grid md:grid-cols-2 gap-12">
                         <div className="space-y-6">
                             <div className="h-[400px] rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white group">
-                                <iframe src={unitMapUrl} width="100%" height="100%" className="grayscale group-hover:grayscale-0 transition-all duration-1000 border-none" loading="lazy"></iframe>
+                                <iframe src={unitMapUrl} width="100%" height="100%" className="border-none" loading="lazy"></iframe>
                             </div>
                             <div className="text-center">
                                 <h4 className="font-black uppercase text-sm text-slate-900">Unit I: Fabrication Hub</h4>
@@ -185,7 +158,7 @@ export default function ContactPage() {
                         </div>
                         <div className="space-y-6">
                             <div className="h-[400px] rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white group">
-                                <iframe src={godownMapUrl} width="100%" height="100%" className="grayscale group-hover:grayscale-0 transition-all duration-1000 border-none" loading="lazy"></iframe>
+                                <iframe src={godownMapUrl} width="100%" height="100%" className="border-none" loading="lazy"></iframe>
                             </div>
                             <div className="text-center">
                                 <h4 className="font-black uppercase text-sm text-slate-900">Unit II: Logistics Hub</h4>

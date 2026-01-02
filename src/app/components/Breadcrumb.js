@@ -3,59 +3,18 @@ import React from 'react';
 import { ChevronRight, Home } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { AutoBreadcrumbSchema, breadcrumbNameMap } from '../../components/schema/BreadcrumbSchema';
 
 const Breadcrumb = () => {
   const pathname = usePathname();
   const pathnames = pathname.split('/').filter((x) => x);
 
-  const breadcrumbNameMap = {
-    'products': 'Inventory',
-    'about': 'Our Legacy',
-    'testimonials': 'Reviews',
-    'contact': 'Contact Sales',
-    'hr-sheet-supplier-mumbai': 'HR Sheet',
-    'cr-sheet-supplier-mumbai': 'CR Sheet',
-    'gi-sheet-supplier-mumbai': 'GI Sheet',
-    'ms-chequered-plate-supplier-mumbai': 'MS Chequered Plate',
-    'stainless-steel-coil-supplier-mumbai': 'SS Coil'
-  };
-
-  const generateBreadcrumbSchema = () => {
-    const breadcrumbList = {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.aeroenterprises.shop/"
-        }
-      ]
-    };
-
-    pathnames.forEach((name, index) => {
-      breadcrumbList.itemListElement.push({
-        "@type": "ListItem",
-        "position": index + 2,
-        "name": breadcrumbNameMap[name] || name.replace(/-/g, ' ').replace(/(^\w|\s\w)/g, m => m.toUpperCase()),
-        "item": `https://www.aeroenterprises.shop/${pathnames.slice(0, index + 1).join('/')}`
-      });
-    });
-
-    return breadcrumbList;
-  };
-
   if (pathnames.length === 0) return null;
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateBreadcrumbSchema())
-        }}
-      />
+      {/* Enhanced Breadcrumb Schema */}
+      <AutoBreadcrumbSchema pathname={pathname} options={{ baseUrl: 'https://www.aeroenterprises.shop' }} />
 
       <nav className="bg-white border-b border-gray-100 py-3 md:py-4 px-4 md:px-6 overflow-hidden " aria-label="Breadcrumb">
         <div className="max-w-7xl mx-auto relative">

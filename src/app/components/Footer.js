@@ -120,6 +120,7 @@ const Footer = () => {
                         </div>
                     </div>
 
+
                     {/* Facility 2: Logistics */}
                     <div className="p-10 md:p-12 hover:bg-white/5 transition-colors lg:border-l border-white/10 group">
                         <div className="flex flex-col md:flex-row gap-6 items-start">

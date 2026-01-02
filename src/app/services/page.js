@@ -6,6 +6,9 @@ import {
 import Link from 'next/link';
 import Image from 'next/image';
 import CTA from '../components/CTA';
+import { ServiceCollectionSchema } from '../../components/schema/CollectionSchema.js';
+import { generateWebPageSchema, stringifySchema } from '../../utils/schemaGenerator.js';
+import { withErrorHandling } from '../../utils/schemaErrorHandler.js';
 
 // 1. --- Next.js SEO Metadata ---
 export const metadata = {
@@ -60,8 +63,55 @@ const serviceList = [
 ];
 
 export default function ServicesPage() {
+    // Generate comprehensive services collection schema
+    const services = serviceList.map(service => ({
+        slug: service.slug,
+        name: service.title,
+        description: service.desc,
+        serviceType: "Manufacturing Service",
+        category: "Fabrication Services",
+        capabilities: service.features
+    }));
+
+    // Generate webpage schema for the services page
+    const generatePageSchema = () => {
+        return withErrorHandling(
+            generateWebPageSchema,
+            [{
+                type: 'CollectionPage',
+                url: '/services',
+                title: 'Precision Metal Fabrication Services Mumbai | Aero Enterprises',
+                description: 'Integrated fabrication services in Vasai. specialized in Sheet Metal Stamping, CNC Bending, Fiber Laser Cutting, and Industrial Powder Coating for OEMs.',
+                mainEntity: {
+                    "@type": "ItemList",
+                    "numberOfItems": serviceList.length
+                }
+            }],
+            {
+                fallbackType: 'webpage',
+                enableRetry: false,
+                sanitizeData: true
+            }
+        );
+    };
+
+    const pageSchema = generatePageSchema();
     return (
         <main className="bg-white font-sans text-slate-900">
+            {/* Services Collection Schema */}
+            <ServiceCollectionSchema
+                services={services}
+                title="Precision Metal Fabrication Services Mumbai | Aero Enterprises"
+                description="Integrated fabrication services in Vasai. specialized in Sheet Metal Stamping, CNC Bending, Fiber Laser Cutting, and Industrial Powder Coating for OEMs."
+                url="/services"
+                options={{ baseUrl: 'https://www.aeroenterprises.shop' }}
+            />
+            
+            {/* Page Schema */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: stringifySchema(pageSchema) }}
+            />
             {/* 1. HERO: THE FABRICATION POWERHOUSE */}
             <div className='bg-slate-900 w-full h-[50vh] flex justify-center items-center text-center px-6 relative overflow-hidden'>
                 <div className="absolute inset-0 opacity-10 bg-[url('/grid-pattern.svg')]"></div>

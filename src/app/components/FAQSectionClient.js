@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import { ChevronDown, Calculator, IndianRupee, MapPin } from 'lucide-react';
+import { EnhancedFAQSchema } from '../../components/schema/FAQSchema';
 
 const AERO_ENTERPRISES_FAQS = [
   {
@@ -36,22 +37,14 @@ const AERO_ENTERPRISES_FAQS = [
 export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState(null);
 
-  // 1. GENERATE SCHEMA FOR GOOGLE RICH SNIPPETS
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": AERO_ENTERPRISES_FAQS.map(f => ({
-      "@type": "Question",
-      "name": f.question,
-      "acceptedAnswer": { "@type": "Answer", "text": f.answer }
-    }))
-  };
-
   return (
     <section className="max-w-5xl mx-auto py-24 px-6">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      {/* Enhanced FAQ Schema */}
+      <EnhancedFAQSchema 
+        faqs={AERO_ENTERPRISES_FAQS}
+        title="Steel Supply & Fabrication FAQs"
+        description="Common questions regarding steel pricing, mill standards, and logistics in the Mumbai industrial corridor"
+        options={{ baseUrl: 'https://www.aeroenterprises.shop' }}
       />
 
       <div className="flex flex-col md:flex-row gap-12">

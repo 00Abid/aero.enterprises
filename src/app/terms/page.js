@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { FileText, Scale, AlertCircle, CheckCircle, ShieldAlert, Gavel, Hammer, Paintbrush, Truck, Zap  } from 'lucide-react';
 import CTA from '../components/CTA';
+import { ContentPageSchema } from '../../components/schema/WebPageSchema.js';
 
 export const metadata = {
     title: "Terms of Service | Industrial Supply & Fabrication Agreement | Aero Enterprises",
@@ -37,6 +38,14 @@ const highlights = [
 export default function TermsPage() {
     return (
         <main className="bg-white font-sans text-slate-900">
+            {/* Terms Page Schema */}
+            <ContentPageSchema
+                title="Terms of Service | Industrial Supply & Fabrication Agreement | Aero Enterprises"
+                description="Official commercial terms governing steel supply, CNC fabrication, stamping, and powder coating at Aero Enterprises. Standard B2B compliance for Mumbai industrial sectors."
+                url="/terms"
+                pageType="WebPage"
+                options={{ baseUrl: 'https://www.aeroenterprises.shop' }}
+            />
             {/* 1. HERO HEADER: THE CORPORATE ANCHOR */}
             <div className='bg-slate-900 w-full h-[40vh] flex justify-center items-center text-center px-6 relative overflow-hidden'>
                 <div className="absolute inset-0 opacity-10 bg-[url('/grid-pattern.svg')]"></div>

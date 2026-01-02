@@ -3,6 +3,10 @@ import { notFound } from 'next/navigation';
 import CTA from '../../components/CTA';
 import { CheckCircle2, ShieldCheck, Cpu, Microscope, Award, Zap, BarChart3 } from 'lucide-react';
 import Image from 'next/image';
+import { EnhancedServiceSchema, ServiceOfferSchema, ServiceCapabilitySchema } from '../../../components/schema/ServiceSchema.js';
+import { TechnicalSpecificationSchema } from '../../../components/schema/EquipmentSchema.js';
+import { generateWebPageSchema, stringifySchema } from '../../../utils/schemaGenerator.js';
+import { withErrorHandling } from '../../../utils/schemaErrorHandler.js';
 
 // 1. --- DYNAMIC SEO METADATA ---
 export async function generateMetadata({ params }) {
@@ -42,24 +46,59 @@ export default async function ServicePage({ params }) {
 
     if (!service) return notFound();
 
+    // Generate webpage schema for the service page
+    const generatePageSchema = () => {
+        const breadcrumbs = [
+            { name: 'Home', url: '/' },
+            { name: 'Fabrication Services', url: '/services' },
+            { name: service.title, url: `/services/${service.slug}` }
+        ];
+
+        return withErrorHandling(
+            generateWebPageSchema,
+            [{
+                type: 'ItemPage',
+                url: `/services/${service.slug}`,
+                title: `${service.title} | Technical Fabrication | Aero Enterprises`,
+                description: service.description.substring(0, 160),
+                mainEntity: {
+                    "@type": "Service",
+                    "@id": `https://www.aeroenterprises.shop/services/${service.slug}`
+                },
+                breadcrumbs
+            }],
+            {
+                fallbackType: 'webpage',
+                enableRetry: false,
+                sanitizeData: true
+            }
+        );
+    };
+
+    const pageSchema = generatePageSchema();
+
     return (
         <main className="bg-white font-sans text-slate-900">
-            {/* JSON-LD Schema for SEO (Tells Google this is a specific Technical Service) */}
+            {/* Comprehensive Service Schema */}
+            <EnhancedServiceSchema service={service} options={{ baseUrl: 'https://www.aeroenterprises.shop' }} />
+            
+            {/* Service Offer Schema */}
+            <ServiceOfferSchema service={service} options={{ baseUrl: 'https://www.aeroenterprises.shop' }} />
+            
+            {/* Service Capability Schema */}
+            <ServiceCapabilitySchema service={service} options={{ baseUrl: 'https://www.aeroenterprises.shop' }} />
+            
+            {/* Technical Specifications Schema */}
+            <TechnicalSpecificationSchema 
+                specifications={service.specs}
+                title={`${service.title} Technical Specifications`}
+                options={{ baseUrl: 'https://www.aeroenterprises.shop' }}
+            />
+            
+            {/* Page Schema */}
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                    __html: JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "Service",
-                        "name": service.title,
-                        "description": service.description,
-                        "provider": {
-                            "@type": "LocalBusiness",
-                            "name": "Aero Enterprises",
-                            "address": "Vasai East, Palghar"
-                        }
-                    })
-                }}
+                dangerouslySetInnerHTML={{ __html: stringifySchema(pageSchema) }}
             />
 
             {/* HERO SECTION */}

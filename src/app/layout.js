@@ -2,11 +2,14 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Breadcrumb from "./components/Breadcrumb";
 import "./globals.css";
+import { generateOrganizationSchema, stringifySchema } from "../utils/schemaGenerator.js";
+import { withErrorHandling } from "../utils/schemaErrorHandler.js";
 
-// 1. --- ELITE METADATA CONFIGURATION ---
+// 1. --- ELITE METADATA CONFIGURATION (2026 ENHANCED) ---
 export const metadata = {
   title: {
-    default: "AERO ENTERPRISES | Industrial Steel Sheets & Coils Supplier Mumbai",
+    template: "%s | AERO ENTERPRISES",
+    default: "AERO ENTERPRISES | Industrial  Sheets,Coils Supplier and Fabrication Partner in Mumbai",
   },
   description: "Certified suppliers of HR, CR, GI, and SS sheets in Vasai, Maharashtra. Serving Mumbai, Thane, and Palghar with Mill Test Certificates (MTC) and certified digital weighbridge accuracy.",
 
@@ -15,10 +18,12 @@ export const metadata = {
   keywords: [
     "AERO ENTERPRISES Vasai",
     "Sheet metal supplier Mumbai",
-    "HR Coil pricing 2025",
+    "HR Coil pricing 2026", // Updated for the new year
     "Stainless Steel sheet supplier Maharashtra",
     "Industrial steel godown Vasai East",
-    "JSW TATA SAIL steel dealer"
+    "JSW TATA SAIL steel dealer",
+    "CNC Bending Services Vasai",
+    "Precision Metal Stamping Mumbai"
   ],
 
   alternates: {
@@ -27,7 +32,7 @@ export const metadata = {
 
   openGraph: {
     title: "AERO ENTERPRISES | Industrial Steel & Metal Solutions",
-    description: "Maharashtra's leading source for technical steel sheets and coils. Mill-certified stock for automotive, pharma, and construction.",
+    description: "Maharashtra's leading source for technical sheets metal, coils and Fabrication partner. Mill-certified stock for automotive, pharma, and construction.",
     url: 'https://www.aeroenterprises.shop',
     siteName: 'Aero Enterprises',
     images: [
@@ -35,7 +40,7 @@ export const metadata = {
         url: '/og-image.webp',
         width: 1200,
         height: 630,
-        alt: 'Aero Enterprises Industrial Steel Stockyard',
+        alt: 'Aero Enterprises Industrial Steel Stockyard and Manufacturing Unit',
       },
     ],
     locale: 'en_IN',
@@ -48,53 +53,97 @@ export const metadata = {
     description: 'Leading industrial steel sheet suppliers serving the Mumbai region.',
     images: ['/og-image.webp'],
   },
+  
+  // High-authority robot instructions
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
-// 2. --- ORGANIZATION SCHEMA (E-E-A-T BOOSTER) ---
-const orgSchema = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Aero Enterprises",
-  "url": "https://www.aeroenterprises.shop",
-  "logo": "https://www.aeroenterprises.shop/AE-logo.webp",
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+91-8459121717",
-    "contactType": "Sales Desk",
-    "areaServed": "IN",
-    "availableLanguage": ["en", "Hindi", "Marathi"]
-  },
-  "sameAs": [
-    "https://linkedin.com/company/aero-enterprisess/"
-  ]
+// 2. --- COMPREHENSIVE SCHEMA INJECTION (E-E-A-T) ---
+
+// Generate Organization Schema with deep error handling
+const generateOrgSchema = () => {
+  return withErrorHandling(
+    generateOrganizationSchema,
+    [{ baseUrl: 'https://www.aeroenterprises.shop' }],
+    {
+      fallbackType: 'Organization',
+      enableRetry: false,
+      sanitizeData: true
+    }
+  );
+};
+
+// Site-wide Search and Identity Schema
+const generateWebSiteSchema = () => {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://www.aeroenterprises.shop/#website",
+    "name": "Aero Enterprises",
+    "url": "https://www.aeroenterprises.shop",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://www.aeroenterprises.shop/products?search={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    },
+    "inLanguage": "en-IN"
+  };
+};
+
+export const viewport = {
+  themeColor: '#0f172a', // Slate-900 for mobile browser branding
+  width: 'device-width',
+  initialScale: 1,
 };
 
 export default function RootLayout({ children }) {
+  const orgSchema = generateOrgSchema();
+  const websiteSchema = generateWebSiteSchema();
+
   return (
-    <html lang="en" className="scroll-smooth" data-scroll-behavior="smooth">
+    <html lang="en" className="scroll-smooth">
       <head>
+        {/* Semantic Schema.org data for Organization and SearchBox */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
+          dangerouslySetInnerHTML={{ __html: stringifySchema(orgSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: stringifySchema(websiteSchema) }}
         />
       </head>
       <body className="antialiased text-slate-900 bg-white selection:bg-blue-600 selection:text-white">
 
-        {/* GLOBAL NAVIGATION */}
+        {/* 1. GLOBAL NAVIGATION BAR */}
         <Navbar />
 
-        {/* SEO POWER MOVE: Breadcrumbs globally injected */}
+        {/* 2. SEO HIERARCHY: Global Breadcrumb Injection */}
+        {/* Positioned before main content to clarify page paths to search bots */}
         <Breadcrumb />
 
-        {/* MAIN CONTENT AREA */}
-        <main id="content" className="min-h-screen">
+        {/* 3. MAIN CONTENT RENDERER */}
+        <main id="content" className="min-h-screen relative">
           {children}
         </main>
 
-        {/* GLOBAL FOOTER */}
+        {/* 4. GLOBAL FOOTER */}
         <Footer />
 
-        {/* 🛑 ADD A FLOATING WHATSAPP BUTTON COMPONENT HERE LATER FOR GLOBAL ACCESS */}
+
       </body>
     </html>
   );

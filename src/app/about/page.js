@@ -3,6 +3,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import CTA from '../components/CTA';
 import { Target, Users, ShieldCheck, Factory, History, Settings, Paintbrush, Zap } from 'lucide-react';
+import { DualFacilitySchema } from '../../components/schema/LocalBusinessSchema.js';
+import { AboutPageSchema } from '../../components/schema/WebPageSchema.js';
+import { ComprehensiveLocationSchema } from '../../components/schema/LocationSchema.js';
 
 // ELITE SEO: Metadata focusing on 'Legacy' and 'Technical Expertise'
 export const metadata = {
@@ -44,6 +47,14 @@ const milestones = [
 export default function AboutPage() {
     return (
         <main className="bg-white">
+            {/* About Page Schema */}
+            <AboutPageSchema options={{ baseUrl: 'https://www.aeroenterprises.shop' }} />
+            
+            {/* Local Business Schema for Both Facilities */}
+            <DualFacilitySchema options={{ baseUrl: 'https://www.aeroenterprises.shop' }} />
+            
+            {/* Comprehensive Location Schema */}
+            <ComprehensiveLocationSchema options={{ baseUrl: 'https://www.aeroenterprises.shop' }} />
             {/* 1. HERO: LEGACY ANCHOR */}
             <div className='bg-slate-900 w-full h-[50vh] flex justify-center items-center text-center px-6 relative overflow-hidden'>
                 <div className="absolute inset-0 opacity-20">
