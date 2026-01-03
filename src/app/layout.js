@@ -9,9 +9,9 @@ import { withErrorHandling } from "../utils/schemaErrorHandler.js";
 export const metadata = {
   title: {
     template: "%s | AERO ENTERPRISES",
-    default: "AERO ENTERPRISES | Industrial  Sheets,Coils Supplier and Fabrication Partner in Mumbai",
+    default: "AERO ENTERPRISES | Industrial Sheets, Coils Supplier and Fabrication Partner in Mumbai",
   },
-  description: "Certified suppliers of HR, CR, GI, and SS sheets in Vasai, Maharashtra. Serving Mumbai, Thane, and Palghar with Mill Test Certificates (MTC) and certified digital weighbridge accuracy.",
+  description: "Certified suppliers of HR, CR, GI, and SS sheets and Fabrication Partner in Vasai, Maharashtra. Serving Mumbai, Thane, and Palghar with Mill Test Certificates (MTC) and certified digital weighbridge accuracy.",
 
   metadataBase: new URL('https://www.aeroenterprises.shop'),
 
